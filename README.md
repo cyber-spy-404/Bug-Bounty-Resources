@@ -115,6 +115,7 @@ Field-tested tips, mindset, report triage advice, and comprehensive index checkl
 
 | Note | Focus Area | Key Techniques |
 | :--- | :--- | :--- |
+| [**Target-Selection-Strategy-Guide.md**](05-Research-and-Field-Notes/Target-Selection-Strategy-Guide.md) | Beginner Target Selection | Solving the target selection crisis, VDP reputation pipeline, high-yield SaaS checklist |
 | [**Bug-Bounty-Research-Tips.md**](05-Research-and-Field-Notes/Bug-Bounty-Research-Tips.md) | Hunting Strategy & Workflow | Avoiding duplicate reports, target selection, finding low-hanging fruit |
 | [**Bug-Bounty-Research-Tips-Part-2.md**](05-Research-and-Field-Notes/Bug-Bounty-Research-Tips-Part-2.md) | Deep Testing & Methodology | Feature deep dives, reading JavaScript, thinking like an application developer |
 | [**Vulnerability-Checklist-Index.md**](05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md) | Master Vulnerability Index | Complete 27-category checklist spanning web, API, and framework security |
