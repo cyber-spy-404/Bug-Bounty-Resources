@@ -185,3 +185,16 @@ if current_attempts > 5:
 - [ ] Tested IP rotation, path normalization, and casing variations.
 - [ ] Kept request volume minimal (under 10 requests) to prevent disruption.
 - [ ] Recorded exact status codes, headers, and response bodies in the report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice bypassing throttling controls, IP rate limits, and concurrency guards:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [2FA broken logic via brute-force](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic) | Practitioner | Bypassing 2FA code rate limiting via session state desync |
+| **PortSwigger Academy** | [Username enumeration via response timing](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-response-timing) | Practitioner | Header spoofing (`X-Forwarded-For`) to defeat brute-force blocks |
+| **PortSwigger Academy** | [Race conditions: Limit overrun](https://portswigger.net/web-security/race-conditions/lab-race-conditions-limit-overrun) | Practitioner | Submitting parallel requests via Turbo Intruder to bypass limits |
+| **OWASP** | [crAPI: OTP Rate Limit Bypass](https://github.com/OWASP/crAPI) | Realistic | Brute-forcing password reset OTPs without rate-limit throttling |
+| **TryHackMe** | [Brute-force Protection Evasion](https://tryhackme.com/room/hydra) | Medium | Evading IP throttling via proxy headers and concurrency |

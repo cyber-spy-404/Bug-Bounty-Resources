@@ -186,3 +186,17 @@ def validate_ip(user_input):
 - [ ] Tested multiple command separators (`;`, `&`, `&&`, `|`, `\n`).
 - [ ] Confirmed execution in response body or recorded verifiable time delay evidence.
 - [ ] Stopped immediately upon verifying command execution without pivoting into internal networks.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice remote OS command injection, shell metacharacter evasion, and out-of-band exfiltration:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [OS command injection, simple case](https://portswigger.net/web-security/os-command-injection/lab-simple) | Apprentice | Executing `whoami` via product feedback product stock checks |
+| **PortSwigger Academy** | [Blind OS command injection with time delays](https://portswigger.net/web-security/os-command-injection/lab-blind-time-delays) | Practitioner | Verifying injection using `|| ping -c 10 127.0.0.1 ||` delays |
+| **PortSwigger Academy** | [Blind OS command injection with output redirection](https://portswigger.net/web-security/os-command-injection/lab-blind-output-redirection) | Practitioner | Redirecting command output to public writable directory |
+| **PortSwigger Academy** | [Blind OS command injection with out-of-band data exfiltration](https://portswigger.net/web-security/os-command-injection/lab-blind-out-of-band-data-exfiltration) | Practitioner | Exfiltrating system usernames via Burp Collaborator DNS lookups |
+| **TryHackMe** | [Command Injection Room](https://tryhackme.com/room/commandinjection) | Easy | In-depth fundamentals of shell metacharacters and filter bypasses |
+| **Hack The Box** | [HTB Machine: Precious](https://app.hackthebox.com/machines/Precious) | Easy | Real-world command injection in PDF generation component (`pdfkit`) |

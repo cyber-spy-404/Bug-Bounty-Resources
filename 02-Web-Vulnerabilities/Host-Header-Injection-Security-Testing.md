@@ -233,3 +233,16 @@ Ensure your reverse proxy (Cloudflare, AWS ALB, Nginx) strips or overwrites untr
 - [ ] Verified that the test email actually arrived with poisoned URL.
 - [ ] Redacted all test email addresses and sensitive token parameters in report.
 - [ ] Did not poison public cache entries serving real end-users.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice password reset poisoning, web cache poisoning, and routing SSRF:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Basic password reset poisoning](https://portswigger.net/web-security/host-header/lab-host-header-basic-password-reset-poisoning) | Practitioner | Poisoning reset link domain via manipulated `Host` header |
+| **PortSwigger Academy** | [Host header authentication bypass](https://portswigger.net/web-security/host-header/lab-host-header-authentication-bypass) | Practitioner | Accessing restricted `/admin` path by spoofing internal host |
+| **PortSwigger Academy** | [Routing-based SSRF via Host header](https://portswigger.net/web-security/host-header/lab-host-header-routing-based-ssrf) | Practitioner | Routing reverse proxy requests to internal cloud metadata IP |
+| **PortSwigger Academy** | [SSRF via flawed request parsing](https://portswigger.net/web-security/host-header/lab-host-header-ssrf-via-flawed-request-parsing) | Practitioner | Supplying absolute URLs in request line to trigger SSRF |
+| **Hack The Box** | [HTB Academy: Server-Side Attacks](https://academy.hackthebox.com/) | Medium | Host header tampering, cache poisoning, and internal proxy pivoting |

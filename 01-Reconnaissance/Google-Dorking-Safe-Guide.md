@@ -152,3 +152,15 @@ If sensitive documents or staging portals have already been indexed by Google:
 - [ ] Captured minimal redacted evidence (URL + status + snippet).
 - [ ] Did not exfiltrate or download complete database dumps or confidential documents.
 - [ ] Recommended `X-Robots-Tag: noindex` and directory indexing restrictions.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice advanced search operator reconnaissance without risking live IP blocks:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Google Dorking Room](https://tryhackme.com/room/googledorking) | Easy | Search operator syntax, `site:`, `filetype:`, finding exposed assets |
+| **TryHackMe** | [Searchlight - IMINT & OSINT](https://tryhackme.com/room/searchlight) | Medium | OSINT indexing, cache recovery, finding hidden directories |
+| **PentesterLab** | [Google Dorks & Information Disclosure](https://pentesterlab.com/) | Easy | Finding backup `.sql`, `.bak`, and configuration files |
+| **Hacker101 CTF** | [Photo Gallery Challenge](https://ctf.hacker101.com/) | Medium | Endpoint discovery through public parameter patterns |

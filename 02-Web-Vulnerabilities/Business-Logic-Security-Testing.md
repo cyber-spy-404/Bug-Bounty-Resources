@@ -177,3 +177,17 @@ This guide is based on the supplied three-page *bussiness logic.pdf* (filename s
 The source is a checklist and does not provide complete reproduction steps or verified outcomes for every topic. The guide preserves the source’s subject areas, uses safe placeholder examples, and adds general defensive recommendations without claiming that a particular application is vulnerable.
 
 *Educational use only. Test ethically, stay within scope, and disclose findings through the program’s approved process.*
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice finding complex application logic and state transition vulnerabilities:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Excessive trust in client-side controls](https://portswigger.net/web-security/logic-flaws/lab-logic-flaws-excessive-trust-in-client-side-controls) | Apprentice | Cart price tampering directly in intercepted POST request |
+| **PortSwigger Academy** | [High-level logic vulnerability](https://portswigger.net/web-security/logic-flaws/lab-logic-flaws-high-level-logic-vulnerability) | Practitioner | Negative quantity tampering leading to zero-dollar checkout |
+| **PortSwigger Academy** | [Inconsistent handling of exceptional input](https://portswigger.net/web-security/logic-flaws/lab-logic-flaws-inconsistent-handling-of-exceptional-input) | Practitioner | Email truncation trick to bypass administrative domain checks |
+| **PortSwigger Academy** | [Flawed enforcement of business rules](https://portswigger.net/web-security/logic-flaws/lab-logic-flaws-flawed-enforcement-of-business-rules) | Practitioner | Infinite discount coupon stacking logic flaw |
+| **Hacker101 CTF** | [Petshop Pro](https://ctf.hacker101.com/) | Medium | Cart price tampering, promo code reuse, balance manipulation |
+| **TryHackMe** | [Business Logic Flaws Room](https://tryhackme.com/room/businesslogicflaws) | Easy | Practical checkout, state transition, and race condition flaws |

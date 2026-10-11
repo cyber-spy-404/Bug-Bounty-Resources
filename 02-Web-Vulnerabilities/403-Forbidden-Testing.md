@@ -184,3 +184,16 @@ Configure load balancers and reverse proxies to overwrite `X-Forwarded-For` with
 - [ ] Tested path normalization (`..;/`, trailing dots, double slashes).
 - [ ] Confirmed that bypass exposes actual restricted data or functionality (not a custom 200 error page).
 - [ ] Redacted any sensitive internal architecture details from report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice bypassing reverse proxy access control lists and WAF restrictions:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [URL-based access control can be circumvented](https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented) | Practitioner | Bypassing frontend ACL via `X-Original-URL` header injection |
+| **PortSwigger Academy** | [Method-based access control can be circumvented](https://portswigger.net/web-security/access-control/lab-method-based-access-control-can-be-circumvented) | Practitioner | Bypassing authorization rules using HTTP verb tampering |
+| **TryHackMe** | [Bypass 403 & WAF Evasion Room](https://tryhackme.com/room/waf) | Medium | Path traversal headers, `%2e`, and URL rewrite techniques |
+| **Hack The Box** | [HTB Machine: Sau](https://app.hackthebox.com/machines/Sau) | Easy | Bypassing internal proxy rules via request-baskets SSRF |
+| **PentesterLab** | [Play Framework Path Traversal](https://pentesterlab.com/) | Medium | Reverse proxy normalization discrepancies and 403 bypass |

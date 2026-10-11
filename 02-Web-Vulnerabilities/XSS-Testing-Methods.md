@@ -204,3 +204,17 @@ Set-Cookie: session_id=XYZ123; Secure; HttpOnly; SameSite=Lax; Path=/
 - [ ] Confirmed code execution in multiple modern browsers.
 - [ ] Documented CSP restrictions if present.
 - [ ] Included full URL, request headers, and screenshots in the report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice context-aware Cross-Site Scripting across modern web architectures:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Reflected XSS into HTML context with nothing encoded](https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded) | Apprentice | Fundamental reflected XSS in search query parameters |
+| **PortSwigger Academy** | [Stored XSS into HTML context with nothing encoded](https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded) | Apprentice | Persistent XSS in blog comments executing in viewer sessions |
+| **PortSwigger Academy** | [DOM XSS in document.write sink using location.search](https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink) | Apprentice | Client-side JavaScript execution through unvalidated sinks |
+| **PortSwigger Academy** | [Reflected XSS into attribute with angle brackets HTML-encoded](https://portswigger.net/web-security/cross-site-scripting/contexts/lab-attribute-angle-brackets-html-encoded) | Practitioner | Breaking out of `value="..."` attributes using quotes and event handlers |
+| **TryHackMe** | [Cross-Site Scripting Room](https://tryhackme.com/room/xss) | Easy | Reflected, Stored, and DOM XSS practical exploitation |
+| **Intigriti** | [Monthly Community XSS Challenges](https://challenge-community.intigriti.io/) | Advanced | Real-world DOM clobbering, CSP bypasses, and sanitization flaws |

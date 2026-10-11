@@ -150,3 +150,15 @@ git filter-repo --invert-paths --path .env
 - [ ] Conducted only minimal non-destructive validation (`sts get-caller-identity`).
 - [ ] Captured commit hash, file link, and redacted secret.
 - [ ] Advised security team on immediate token revocation and history rewriting.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice secret hunting and source code intelligence safely:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Git Happens Room](https://tryhackme.com/room/githappens) | Easy | Recovering commit history, finding hardcoded API keys |
+| **Hack The Box** | [HTB Machine: Pilgrimage](https://app.hackthebox.com/machines/Pilgrimage) | Easy | Recovering exposed `.git` directories and analyzing source leaks |
+| **PentesterLab** | [Git Directory Extraction Badge](https://pentesterlab.com/) | Medium | Reconstructing source repositories from `.git/index` |
+| **OWASP** | [crAPI: Secret Discovery Challenge](https://github.com/OWASP/crAPI) | Medium | Identifying leaked third-party keys in public codebases |

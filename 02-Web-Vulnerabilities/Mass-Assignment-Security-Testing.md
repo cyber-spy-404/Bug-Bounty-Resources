@@ -209,3 +209,15 @@ public ResponseEntity<?> updateProfile(@RequestBody @Valid UserUpdateDTO dto,
 - [ ] Checked registration, profile update, account settings, and checkout flows.
 - [ ] Did not perform administrative actions on other users after confirming role escalation.
 - [ ] Redacted personal test tokens in the final report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice JSON over-posting, parameter injection, and role elevation:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Bypassing access controls via mass assignment](https://portswigger.net/web-security/api-testing/lab-bypassing-access-controls-via-mass-assignment) | Practitioner | Injecting `is_admin: true` in user checkout/profile JSON |
+| **OWASP** | [crAPI: User Role Mass Assignment](https://github.com/OWASP/crAPI) | Realistic | Over-posting role parameters during mechanic verification |
+| **OWASP** | [Juice Shop: Forged User Registration](https://owasp.org/www-project-juice-shop/) | Easy | Registering as an administrator by injecting `role: "admin"` |
+| **TryHackMe** | [API Security: Mass Assignment](https://tryhackme.com/room/apisecurity) | Medium | Discovering hidden schema parameters and privilege tampering |

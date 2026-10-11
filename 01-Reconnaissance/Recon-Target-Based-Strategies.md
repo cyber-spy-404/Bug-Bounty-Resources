@@ -106,3 +106,15 @@ For defenders, maintain an authoritative asset inventory, remove abandoned DNS/s
 
 ## 📚 Source Notes
 Based on *Recon Target Based.html*. The source defines three scope levels and lists the reconnaissance activities under each. This guide preserves those categories while clarifying that organization-related assets and active tests require explicit program authorization. The source's spelling “Jeales” is retained in the checklist note; the HTML does not define that tool.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice target-based reconnaissance in controlled sandboxes:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Passive Reconnaissance](https://tryhackme.com/room/passiverecon) | Easy | Whois, DNS lookup, Shodan query structure, OSINT tools |
+| **TryHackMe** | [Subdomain Enumeration](https://tryhackme.com/room/subdomainenumeration) | Easy | Certificate transparency, DNS brute forcing, Sublist3r |
+| **Hack The Box** | [HTB Academy: Information Gathering - Web](https://academy.hackthebox.com/) | Medium | Active vs. passive asset discovery, virtual host routing |
+| **Hacker101 CTF** | [Hacker101: Micro-CMS v1](https://ctf.hacker101.com/) | Easy | Attack surface reconnaissance and endpoint discovery |

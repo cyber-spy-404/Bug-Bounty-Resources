@@ -160,3 +160,14 @@ location ~ ^/(_profiler|_wdt|_error) {
 - [ ] Checked for Twig SSTI using non-destructive math expression `{{7*7}}`.
 - [ ] Stopped immediately upon verifying profiler exposure without harvesting credentials.
 - [ ] Redacted all database queries, environment variables, and passwords in report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice evaluating Symfony applications, Web Profiler leaks, and secret exploitation:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Symfony Web Profiler Exposure](https://tryhackme.com/room/symfony) | Easy | Extracting database passwords and user tokens from `/_profiler` |
+| **Hack The Box** | [HTB Machine: Cascade](https://app.hackthebox.com/machines/Cascade) | Medium | Auditing Symfony framework debug endpoints and configuration files |
+| **PentesterLab** | [Symfony Secret Fragment RCE (CVE-2014-5244)](https://pentesterlab.com/) | Hard | Code evaluation via signed `/_fragment` requests using leaked secret |

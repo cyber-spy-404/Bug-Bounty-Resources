@@ -170,3 +170,14 @@ await sharp(inputBuffer)
 - [ ] Checked multiple upload contexts (avatars, galleries, attachments).
 - [ ] Included exact `exiftool` terminal output in the disclosure report.
 - [ ] Recommended automated stripping via ImageMagick `-strip` or Sharp.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice analyzing metadata retention and image parsing vulnerabilities:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Metadata Extraction Room](https://tryhackme.com/room/metadataextraction) | Easy | Using `exiftool` to locate embedded GPS latitude/longitude data |
+| **Hack The Box** | [HTB Machine: Pilgrimage](https://app.hackthebox.com/machines/Pilgrimage) | Easy | ImageMagick CVE-2022-44268 extracting sensitive files via PNG profile |
+| **OWASP** | [Juice Shop: GPS EXIF Privacy Challenge](https://owasp.org/www-project-juice-shop/) | Easy | Extracting confidential company location from uploaded media |

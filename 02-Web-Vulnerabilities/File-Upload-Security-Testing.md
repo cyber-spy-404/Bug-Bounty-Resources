@@ -206,3 +206,18 @@ location /uploads/ {
 - [ ] Tested extension variations, MIME types, and magic bytes.
 - [ ] Deleted all test files immediately after confirming the finding.
 - [ ] Included exact HTTP request, response, and storage URL in disclosure report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice uploading payloads, bypassing MIME checks, and achieving RCE safely:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Remote code execution via web shell upload](https://portswigger.net/web-security/file-upload/lab-file-upload-remote-code-execution-via-web-shell-upload) | Apprentice | Uploading basic `.php` shell without file type restrictions |
+| **PortSwigger Academy** | [Web shell upload via Content-Type restriction bypass](https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-content-type-restriction-bypass) | Practitioner | Tampering with `Content-Type: image/jpeg` in Burp Suite |
+| **PortSwigger Academy** | [Web shell upload via path traversal](https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-path-traversal) | Practitioner | Writing files outside non-executable directories (`..%2f`) |
+| **PortSwigger Academy** | [Web shell upload via extension blacklist bypass](https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-extension-blacklist-bypass) | Practitioner | Overriding Apache `.htaccess` to execute custom extension files |
+| **PortSwigger Academy** | [Web shell upload via obfuscated file extension](https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-obfuscated-file-extension) | Practitioner | Null byte injection (`shell.php%00.jpg`) and double extensions |
+| **TryHackMe** | [Upload Vulnerabilities Room](https://tryhackme.com/room/uploadvulnerabilities) | Medium | Magic byte editing, client-side JS bypass, and polyglots |
+| **Hack The Box** | [HTB Machine: Pilgrimage](https://app.hackthebox.com/machines/Pilgrimage) | Easy | ImageMagick arbitrary file read via crafted PNG profile |

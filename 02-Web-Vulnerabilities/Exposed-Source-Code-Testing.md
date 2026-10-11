@@ -155,3 +155,15 @@ Add to `/etc/apache2/apache2.conf` or `.htaccess`:
 - [ ] Checked that response body contains valid metadata signatures (`ref: refs/heads/`, `DB_PASSWORD=`).
 - [ ] Stopped immediately without downloading full repositories or databases.
 - [ ] Redacted all confirmed secrets or proprietary paths in the disclosure report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice analyzing exposed repositories, backup artifacts, and source disclosure:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **Hack The Box** | [HTB Machine: Pilgrimage](https://app.hackthebox.com/machines/Pilgrimage) | Easy | Dumping complete Git repository from public web root (`git-dumper`) |
+| **TryHackMe** | [Git Happens Room](https://tryhackme.com/room/githappens) | Easy | Unpacking Git object trees to locate developer credentials |
+| **PentesterLab** | [Git Directory Extraction Badge](https://pentesterlab.com/) | Medium | Recovering deleted source code files from git object blobs |
+| **Hacker101 CTF** | [Cody's First Blog](https://ctf.hacker101.com/) | Medium | Finding PHP source disclosure to uncover authentication bypass |

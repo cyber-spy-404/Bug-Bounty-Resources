@@ -206,3 +206,16 @@ Use per-session random reference mappings (e.g., displaying records as `1, 2, 3`
 - [ ] Tested all HTTP verbs (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`).
 - [ ] Tested parameter pollution and alternate encoding formats.
 - [ ] Included exact request/response evidence with redacted test tokens in the report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice Insecure Direct Object References in authentic application workflows:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Insecure direct object references](https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references) | Apprentice | Download private chat transcripts via static file parameter |
+| **PortSwigger Academy** | [User ID controlled by request parameter](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter) | Apprentice | Horizontal IDOR accessing another customer's account API key |
+| **TryHackMe** | [IDOR Room](https://tryhackme.com/room/idor) | Easy | Step-by-step parameter tampering on invoices and user IDs |
+| **OWASP** | [crAPI: Vehicle Location BOLA Challenge](https://github.com/OWASP/crAPI) | Realistic | Broken Object Level Authorization accessing other users' cars |
+| **Hack The Box** | [HTB Academy: Web Attacks -> IDOR](https://academy.hackthebox.com/) | Medium | Mass parameter tampering, UUID prediction, and chained IDOR |

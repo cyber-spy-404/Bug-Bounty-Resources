@@ -156,3 +156,16 @@ This guide is based on the supplied two-page *auth bypass.pdf*. Page 1 covers pr
 The PDF provides checklist-style prompts rather than complete technical explanations. This rewrite preserves those topics, uses safe test examples, and adds general defensive guidance. It does not claim that any particular application is vulnerable.
 
 *Educational use only. Test ethically, stay within scope, and disclose findings through the program’s approved process.*
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice authentication logic bypasses, token forgery, and signature tampering:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [JWT authentication bypass via unverified signature](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-unverified-signature) | Apprentice | Tampering with JWT payload without updating the signature |
+| **PortSwigger Academy** | [JWT authentication bypass via flawed signature verification](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification) | Practitioner | Modifying algorithm to `none` to bypass JWT verification |
+| **PortSwigger Academy** | [JWT authentication bypass via weak HMAC secret key](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-weak-hmac-secret-key) | Practitioner | Cracking weak JWT signing secrets using Hashcat |
+| **TryHackMe** | [Authentication Bypass Room](https://tryhackme.com/room/authenticationbypass) | Easy | Username enumeration, cookie tampering, and logic flaws |
+| **Hack The Box** | [HTB Machine: Shoppy](https://app.hackthebox.com/machines/Shoppy) | Easy | Bypassing authentication using NoSQL object injection (`admin' || '1'=='1`) |

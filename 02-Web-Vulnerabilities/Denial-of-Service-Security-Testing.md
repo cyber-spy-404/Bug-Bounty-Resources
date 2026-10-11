@@ -181,3 +181,15 @@ const server = new ApolloServer({
 - [ ] Confirmed exponential time increase with small sample iterations.
 - [ ] Halted testing immediately before causing real denial of service.
 - [ ] Provided exact regex, schema query, or calculation in the report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice identifying application-level Denial of Service without disrupting production:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Server-side prototype pollution leading to DoS](https://portswigger.net/web-security/prototype-pollution/server-side) | Practitioner | Polluting Object.prototype in Node.js causing server crash |
+| **PortSwigger Academy** | [Exploiting XXE to perform SSRF & DoS](https://portswigger.net/web-security/xxe) | Practitioner | Billion laughs XML entity expansion vulnerability |
+| **TryHackMe** | [ReDoS Room](https://tryhackme.com/room/redos) | Medium | Catastrophic regex backtracking on string input |
+| **OWASP** | [Juice Shop: Zero-Star Feedback ReDoS Challenge](https://owasp.org/www-project-juice-shop/) | Medium | Triggering CPU resource exhaustion via regex payload |

@@ -175,3 +175,16 @@ This guide is based on the supplied 17-page *authentication.pdf*. The document i
 The source does not provide a target application's implementation, expected outcomes, or evidence that the listed cases work as bypasses. This rewrite groups the cases into validation categories and adds general defensive guidance; it does not claim that any specific target is vulnerable.
 
 *Educational use only. Test ethically, stay within scope, and disclose findings through the program’s approved process.*
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice brute-force defense evaluation, credential stuffing, and response timing:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Username enumeration via different responses](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-different-responses) | Apprentice | Differentiating valid accounts via error message differences |
+| **PortSwigger Academy** | [Username enumeration via response timing](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-response-timing) | Practitioner | Identifying valid usernames based on server cryptographic delay |
+| **PortSwigger Academy** | [Broken brute-force protection, IP block](https://portswigger.net/web-security/authentication/password-based/lab-broken-bruteforce-protection-ip-block) | Practitioner | Interleaving legitimate logins to reset IP failed-attempt counters |
+| **TryHackMe** | [Hydra Room](https://tryhackme.com/room/hydra) | Easy | Automating web login brute forcing and evaluating defense thresholds |
+| **OWASP** | [Juice Shop: Login Bypasses](https://owasp.org/www-project-juice-shop/) | Easy | Testing authentication endpoints for SQLi and logic loopholes |

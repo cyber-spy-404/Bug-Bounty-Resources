@@ -165,3 +165,17 @@ Require current password confirmation or step-up MFA verification before perform
 - [ ] Generated clean, self-contained HTML PoC.
 - [ ] Verified that state change actually completed in victim test session.
 - [ ] Redacted personal session identifiers from submission report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice Cross-Site Request Forgery across authentication methods and token variations:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [CSRF vulnerability with no defenses](https://portswigger.net/web-security/csrf/lab-no-defenses) | Apprentice | Creating an automated HTML form to change victim email |
+| **PortSwigger Academy** | [CSRF where token validation depends on request method](https://portswigger.net/web-security/csrf/lab-token-validation-depends-on-request-method) | Practitioner | Bypassing CSRF check by switching `POST` to `GET` |
+| **PortSwigger Academy** | [CSRF where token validation depends on token being present](https://portswigger.net/web-security/csrf/lab-token-validation-depends-on-token-being-present) | Practitioner | Bypassing validation by completely deleting the CSRF parameter |
+| **PortSwigger Academy** | [CSRF where token is not tied to the user session](https://portswigger.net/web-security/csrf/lab-token-not-tied-to-user-session) | Practitioner | Stealing a token from attacker session to submit in victim session |
+| **PortSwigger Academy** | [SameSite Lax bypass via method override](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions/lab-samesite-lax-bypass-via-method-override) | Practitioner | Bypassing SameSite Lax using `GET` with `_method=POST` override |
+| **TryHackMe** | [Cross-Site Request Forgery Room](https://tryhackme.com/room/csrf) | Easy | Practical CSRF weaponization and SameSite cookie defenses |

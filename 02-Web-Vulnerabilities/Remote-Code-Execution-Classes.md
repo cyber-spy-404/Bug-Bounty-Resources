@@ -169,3 +169,16 @@ rendered = template.render(user_name=user_name)
 - [ ] Documented clear step-by-step reproduction instructions.
 - [ ] Stopped immediately upon confirming command execution without reading system files or pivoting.
 - [ ] Recommended structural architecture remediation (parameterization, safe deserialization).
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice Server-Side Template Injection (SSTI), Deserialization, and RCE classes:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Basic server-side template injection](https://portswigger.net/web-security/server-side-template-injection/lab-server-side-template-injection-basic) | Apprentice | Identifying ERB template evaluation `${7*7}` in message templates |
+| **PortSwigger Academy** | [Server-side template injection using documentation](https://portswigger.net/web-security/server-side-template-injection/lab-server-side-template-injection-using-documentation) | Practitioner | Exploiting FreeMarker template syntax to execute system commands |
+| **PortSwigger Academy** | [Modifying serialized objects](https://portswigger.net/web-security/deserialization/exploiting/lab-deserialization-modifying-serialized-objects) | Apprentice | PHP serialized cookie manipulation to achieve administrative access |
+| **TryHackMe** | [Server-Side Template Injection (SSTI)](https://tryhackme.com/room/server-side-template-injection) | Medium | Jinja2, Twig, and Smarty sandbox escapes leading to RCE |
+| **Hack The Box** | [HTB Machine: Sau](https://app.hackthebox.com/machines/Sau) | Easy | Request-baskets SSRF chained to Malta RCE |

@@ -160,3 +160,16 @@ Reproduction notes: [Minimal, non-destructive steps]
 This guide is based on the two-page *Admin panel.pdf* supplied for this rewrite. The PDF is a compact checklist and does not provide complete explanations for every heading. Where the source only names a technique, this document presents it as a testing lead and adds general defensive guidance; it does not claim that a particular target is vulnerable.
 
 *Educational use only. Test ethically, stay within scope, and disclose findings through the program’s approved process.*
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice administrative panel discovery, authorization bypasses, and access control:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Unprotected admin functionality](https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality) | Apprentice | Locating hidden administrative panel path via robots.txt |
+| **PortSwigger Academy** | [Unprotected admin functionality with unpredictable URL](https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality-with-unpredictable-url) | Apprentice | Extracting random admin URL from client-side JavaScript source |
+| **PortSwigger Academy** | [URL-based access control can be circumvented](https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented) | Practitioner | Bypassing admin path restrictions via `X-Original-URL: /admin` |
+| **Hack The Box** | [HTB Machine: BoardLight](https://app.hackthebox.com/machines/BoardLight) | Easy | Default credential takeover of internal Dolibarr CRM admin console |
+| **TryHackMe** | [Admin Panel Discovery Room](https://tryhackme.com/room/adminpanel) | Easy | Wordlist fuzzing, virtual host enumeration, and header bypasses |

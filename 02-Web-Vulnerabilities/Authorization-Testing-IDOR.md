@@ -159,3 +159,16 @@ This guide is based on the supplied five-page *authorization.pdf*. Page 1 covers
 The source does not explain the expected result of every variation or demonstrate that any specific application is vulnerable. This rewrite preserves the source’s categories, groups the later variations into broader validation concerns, and adds general defensive guidance without presenting them as confirmed exploit techniques.
 
 *Educational use only. Test ethically, stay within scope, and disclose findings through the program’s approved process.*
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice vertical and horizontal role-based privilege escalation:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Unprotected admin functionality](https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality) | Apprentice | Accessing privileged administrator endpoints via path discovery |
+| **PortSwigger Academy** | [User role controlled by request parameter](https://portswigger.net/web-security/access-control/lab-user-role-controlled-by-request-parameter) | Practitioner | Elevating privileges by tampering with hidden role parameters |
+| **PortSwigger Academy** | [User role can be modified in user profile](https://portswigger.net/web-security/access-control/lab-user-role-can-be-modified-in-user-profile) | Practitioner | JSON role elevation (`roleid: 2`) during profile update |
+| **TryHackMe** | [Authorization Flaws Room](https://tryhackme.com/room/brokenauth) | Medium | Vertical escalation from regular user to super-administrator |
+| **Hacker101 CTF** | [Micro-CMS v2](https://ctf.hacker101.com/) | Medium | Bypassing role-based authentication to edit pages |

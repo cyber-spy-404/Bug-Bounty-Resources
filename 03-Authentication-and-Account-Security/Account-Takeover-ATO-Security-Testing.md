@@ -164,3 +164,16 @@ This guide is based on the three-page *ATO.pdf* supplied for rewriting. The sour
 The PDF gives limited detail for several headings and does not establish that any specific target is vulnerable. This guide preserves those topics while replacing unsafe exploit instructions with controlled test guidance and adding general defensive recommendations. The original JavaScript cookie-exfiltration snippet and operational takeover payloads are omitted.
 
 *Educational use only. Test ethically, stay within scope, and disclose findings through the program’s approved process.*
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice end-to-end Account Takeover chaining in authentic environments:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Password reset broken logic](https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-reset-broken-logic) | Practitioner | Removing target token parameter to reset administrative password |
+| **PortSwigger Academy** | [Basic password reset poisoning](https://portswigger.net/web-security/host-header/lab-host-header-basic-password-reset-poisoning) | Practitioner | Poisoning Host header to intercept reset token via attacker server |
+| **PortSwigger Academy** | [Forced OAuth profile linking leading to ATO](https://portswigger.net/web-security/oauth/lab-oauth-forced-oauth-profile-linking) | Practitioner | CSRF in OAuth authorization flow to attach victim account to attacker |
+| **PortSwigger Academy** | [OAuth account hijacking via redirect_uri](https://portswigger.net/web-security/oauth/lab-oauth-account-hijacking-via-redirect-uri) | Practitioner | Leaking OAuth authorization codes via open redirect parameter |
+| **Hacker101 CTF** | [Micro-CMS v2](https://ctf.hacker101.com/) | Medium | Chaining authentication bypass to achieve complete account takeover |

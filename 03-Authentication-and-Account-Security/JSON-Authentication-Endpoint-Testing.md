@@ -190,3 +190,15 @@ Reject any incoming request that does not strictly match `Content-Type: applicat
 - [ ] Tested type variations (booleans, arrays, integers).
 - [ ] Verified Content-Type switching behavior.
 - [ ] Redacted all test passwords and JWT tokens in the report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice testing REST and JSON API authentication, JWT tokens, and NoSQL injection:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [JWT authentication bypass via jku header injection](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-jku-header-injection) | Practitioner | Pointing `jku` header to an attacker-controlled JSON Web Key Set |
+| **PortSwigger Academy** | [JWT authentication bypass via kid header path traversal](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-kid-header-path-traversal) | Practitioner | Exploiting `kid` directory traversal to sign tokens with `/dev/null` |
+| **TryHackMe** | [JSON Web Token (JWT) Exploitation](https://tryhackme.com/room/jwt) | Medium | Signature tampering, header manipulation, and key confusion |
+| **Hack The Box** | [HTB Machine: Shoppy](https://app.hackthebox.com/machines/Shoppy) | Easy | JSON authentication body manipulation via NoSQL query operators |

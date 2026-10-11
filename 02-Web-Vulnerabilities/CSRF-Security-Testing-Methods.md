@@ -166,3 +166,16 @@ Reject any incoming request to JSON API endpoints that does not strictly match `
 - [ ] Confirmed whether JSON endpoints process `text/plain` without preflight.
 - [ ] Checked for HTTP method overrides (`_method=PUT`, `_method=DELETE`).
 - [ ] Confirmed that state changes took effect in a controlled test victim account.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Master modern CSRF edge-cases, double-submit cookie flaws, and Referer validation bypasses:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [CSRF where token is tied to non-session cookie](https://portswigger.net/web-security/csrf/lab-token-tied-to-non-session-cookie) | Practitioner | Chaining cookie injection (`CRLF` / search cookie) with CSRF |
+| **PortSwigger Academy** | [CSRF where token is duplicated in cookie](https://portswigger.net/web-security/csrf/lab-token-duplicated-in-cookie) | Practitioner | Exploiting flawed double-submit cookie patterns via cookie-tossing |
+| **PortSwigger Academy** | [CSRF where Referer validation depends on header being present](https://portswigger.net/web-security/csrf/lab-referer-validation-depends-on-header-being-present) | Practitioner | Suppressing Referer header using `<meta name="referrer" content="no-referrer">` |
+| **PortSwigger Academy** | [CSRF with broken Referer validation](https://portswigger.net/web-security/csrf/lab-referer-validation-broken) | Practitioner | Bypassing regex by crafting `attacker.com?trusted-domain.com` |
+| **Hack The Box** | [HTB Academy: Web Attacks -> CSRF](https://academy.hackthebox.com/) | Medium | Exploiting JSON-based CSRF and CORS misconfigurations |

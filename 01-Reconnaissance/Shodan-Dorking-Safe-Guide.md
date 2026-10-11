@@ -148,3 +148,15 @@ Ensure databases and internal microservices bind only to the local loopback inte
 - [ ] Verified reachability with minimal non-destructive HTTP/banner probe.
 - [ ] Did not attempt unauthenticated database reads or credential stuffing.
 - [ ] Captured IP, port, service banner, and Shodan query in report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice infrastructure indexing and internet-wide asset discovery:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Shodan Room](https://tryhackme.com/room/shodan) | Easy | ASN search filters, product fingerprints, locating test servers |
+| **TryHackMe** | [Network Services](https://tryhackme.com/room/networkservices) | Easy | Open database discovery (MongoDB, Elasticsearch, Redis) |
+| **Hack The Box** | [HTB Academy: Footprinting](https://academy.hackthebox.com/) | Medium | Port scanning correlation with Shodan banners |
+| **PentesterLab** | [Electronic Codebook & Service Exposure](https://pentesterlab.com/) | Medium | Unauthenticated cloud databases and management consoles |

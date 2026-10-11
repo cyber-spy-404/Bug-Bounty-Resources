@@ -191,3 +191,16 @@ Adopt ABAC or PBAC (Policy-Based Access Control) using engines like **Open Polic
 - [ ] Inspected background job and asynchronous report generation triggers.
 - [ ] Tested blind write operations (invitations, collaborator additions, webhook setups).
 - [ ] Confirmed remediation prevents both horizontal and vertical privilege escalation.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Master advanced authorization bypasses and unpredictable ID techniques:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [User ID controlled by request parameter, with unpredictable user IDs](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-unpredictable-user-ids) | Practitioner | Discovering target GUIDs from public blog profile links |
+| **PortSwigger Academy** | [User ID controlled by request parameter with data leakage in redirect](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-data-leakage-in-redirect) | Practitioner | 302 redirect response body leakage despite client redirect |
+| **PortSwigger Academy** | [User ID controlled by request parameter with password disclosure](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-password-disclosure) | Practitioner | Extracting administrator credentials from pre-filled form fields |
+| **OWASP** | [crAPI: Mechanic Report Order BOLA](https://github.com/OWASP/crAPI) | Realistic | Bypassing authorization in nested REST & GraphQL endpoints |
+| **Hack The Box** | [HTB Machine: Shoppy](https://app.hackthebox.com/machines/Shoppy) | Easy | Bypassing authorization and extracting multi-user orders |

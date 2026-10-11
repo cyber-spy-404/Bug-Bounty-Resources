@@ -184,3 +184,14 @@ python manage.py check --deploy
 - [ ] Checked for wildcard `ALLOWED_HOSTS = ['*']`.
 - [ ] Verified whether security headers (`X-Frame-Options`, `HSTS`) are active.
 - [ ] Redacted all secret keys, passwords, and server paths in the report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice testing Django web applications, debug leakage, and secret exposure:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Django Security & Debug Leaks](https://tryhackme.com/room/django) | Easy | Triggering unhandled exceptions with `DEBUG=True` to leak secrets |
+| **Hack The Box** | [HTB Machine: MetaTwo](https://app.hackthebox.com/machines/MetaTwo) | Medium | Exploiting Django ORM injection and finding hardcoded secret keys |
+| **PentesterLab** | [Django Session Forgery & SECRET_KEY](https://pentesterlab.com/) | Medium | Crafting signed session cookies after recovering `SECRET_KEY` |

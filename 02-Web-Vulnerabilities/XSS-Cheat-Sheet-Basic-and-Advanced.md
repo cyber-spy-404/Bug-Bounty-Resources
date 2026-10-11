@@ -224,3 +224,16 @@ example.com
 - [ ] Kept payload non-destructive (`alert(document.domain)` or `console.log`).
 - [ ] Captured clear screenshots showing executing alert box with target domain clearly visible.
 - [ ] Provided remediation recommendations targeting root-cause context encoding.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice complex filter evasion, WAF bypasses, and CSP circumvention:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Reflected XSS with event handlers and href attributes blocked](https://portswigger.net/web-security/cross-site-scripting/contexts/lab-event-handlers-and-href-attributes-blocked) | Practitioner | Using custom HTML5 tags (`<xss id=x onfocus=...>`) with SVG anchors |
+| **PortSwigger Academy** | [Reflected XSS with some SVG markup allowed](https://portswigger.net/web-security/cross-site-scripting/contexts/lab-some-svg-markup-allowed) | Practitioner | Bypassing strict WAFs using `<svg><animatetransform>` tags |
+| **PortSwigger Academy** | [Reflected XSS protected by very strict CSP with CSP bypass](https://portswigger.net/web-security/cross-site-scripting/contexts/lab-csp-bypass) | Practitioner | Bypassing CSP using JSONP endpoints and script gadets |
+| **Hack The Box** | [HTB Academy: Cross-Site Scripting](https://academy.hackthebox.com/) | Medium | Filter evasion, character encoding, and blind XSS exfiltration |
+| **Hacker101 CTF** | [Micro-CMS v1](https://ctf.hacker101.com/) | Easy | Markdown injection to execute stored XSS payloads |

@@ -145,3 +145,14 @@ Run Atlassian's permission audit script to convert existing public filters to pr
 - [ ] Checked for publicly exposed filters under `ManageFilters.jspa`.
 - [ ] Sampled only minimal non-sensitive records (under 3 items) as proof.
 - [ ] Redacted all employee names, project keys, and ticket titles in report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice evaluating Jira instances for information leaks and API exposure:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **TryHackMe** | [Jira CVE-2019-8451 & API Auditing](https://tryhackme.com/room/jira) | Medium | SSRF and unauthenticated user enumeration on REST endpoints |
+| **Hack The Box** | [HTB Machine: BoardLight](https://app.hackthebox.com/machines/BoardLight) | Easy | Exploiting open project management boards and unauthenticated APIs |
+| **PentesterLab** | [Jira Misconfiguration & Public Filters](https://pentesterlab.com/) | Medium | Discovering leaked customer tickets and employee PII |

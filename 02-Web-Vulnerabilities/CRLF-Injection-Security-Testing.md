@@ -145,3 +145,16 @@ header("Location: " . filter_var($url, FILTER_SANITIZE_URL));
 - [ ] Verified that browser DevTools records the injected cookie in the Application tab.
 - [ ] Tested single `%0a`, double encoding `%250d%250a`, and Unicode variants.
 - [ ] Included raw HTTP request and response headers in the report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice HTTP response splitting, header injection, and cache poisoning:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [HTTP response splitting & header injection](https://portswigger.net/web-security/request-smuggling) | Practitioner | Injecting `
+Set-Cookie:` into redirect headers |
+| **PentesterLab** | [HTTP Response Splitting Badge](https://pentesterlab.com/) | Medium | Injecting CRLF characters to set arbitrary cookies and XSS |
+| **TryHackMe** | [HTTP Smuggling & Header Flaws](https://tryhackme.com/room/httprequestsmuggling) | Hard | Injecting headers to manipulate reverse proxy responses |
+| **Hack The Box** | [HTB Academy: HTTP Header Manipulation](https://academy.hackthebox.com/) | Medium | Session fixation and cache poisoning via CRLF sequences |

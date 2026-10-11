@@ -189,3 +189,16 @@ Implement strict throttling on 2FA endpoints (e.g., maximum 5 attempts per chall
 - [ ] Checked alternative channels (OAuth, mobile APIs, password reset flows).
 - [ ] Tested code reuse and cross-account code replay.
 - [ ] Included exact request/response flow with redacted test credentials in report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice Two-Factor Authentication bypasses and multi-factor logic flaws:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [2FA simple bypass](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-simple-bypass) | Apprentice | Directly navigating to `/my-account` without completing 2FA form |
+| **PortSwigger Academy** | [2FA broken logic](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic) | Practitioner | Cookie tampering to generate and verify OTP codes for other accounts |
+| **PortSwigger Academy** | [2FA bypass using a brute-force attack](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-bypass-using-a-brute-force-attack) | Practitioner | Turbo Intruder multi-threading to brute force 4-digit MFA codes |
+| **OWASP** | [crAPI: MFA & OTP Bypass Challenge](https://github.com/OWASP/crAPI) | Realistic | Bypassing OTP verification through lack of rate-limiting |
+| **TryHackMe** | [Authentication Bypass: 2FA Room](https://tryhackme.com/room/authenticationbypass) | Easy | Status code tampering and parameter omission in 2FA handlers |

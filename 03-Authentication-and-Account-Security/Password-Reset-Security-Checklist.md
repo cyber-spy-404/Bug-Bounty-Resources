@@ -141,3 +141,15 @@ Whenever credentials change, increment a `token_version` column in the user data
 - [ ] Checked for token leakage in `Referer` headers to third-party CDNs.
 - [ ] Confirmed single-use and expiry enforcement.
 - [ ] Verified that existing sessions are terminated across all devices.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice broken password reset flows, token entropy analysis, and host poisoning:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [Password reset broken logic](https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-reset-broken-logic) | Practitioner | Tampering with hidden username parameter to reset victim password |
+| **PortSwigger Academy** | [Password reset poisoning via Apache / Nginx Host header](https://portswigger.net/web-security/host-header/lab-host-header-basic-password-reset-poisoning) | Practitioner | Poisoning `Host` header to redirect reset link tokens to attacker domain |
+| **OWASP** | [crAPI: Password Reset OTP Brute Force](https://github.com/OWASP/crAPI) | Realistic | Resetting other user accounts by brute forcing unthrottled 4-digit OTP |
+| **TryHackMe** | [Broken Authentication: Password Reset](https://tryhackme.com/room/brokenauth) | Easy | Referer token leakage, predictable tokens, and session persistence |

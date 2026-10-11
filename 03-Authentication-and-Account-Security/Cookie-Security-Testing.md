@@ -176,3 +176,15 @@ app.post('/logout', (req, res) => {
 - [ ] Confirmed whether session tokens remain valid after clicking logout.
 - [ ] Tested whether existing sessions survive password change events.
 - [ ] Included exact `Set-Cookie` response headers in the disclosure report.
+---
+
+## 🧪 Hands-On Practice Labs & Real-World Challenges
+
+Practice session cookie manipulation, flag evasion, and SameSite bypasses:
+
+| Platform | Lab / Challenge Name | Difficulty | Key Focus Area |
+| :--- | :--- | :--- | :--- |
+| **PortSwigger Academy** | [SameSite Lax bypass via method override](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions/lab-samesite-lax-bypass-via-method-override) | Practitioner | Bypassing SameSite Lax cookie restrictions via method spoofing |
+| **PortSwigger Academy** | [SameSite Strict bypass via client-side redirect](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions/lab-samesite-strict-bypass-via-client-side-redirect) | Practitioner | Bypassing SameSite Strict via on-site open redirect gadget |
+| **TryHackMe** | [Cookie Stealing & Session Hijacking](https://tryhackme.com/room/cookiehijacking) | Easy | Missing `HttpOnly` flag exploitation via XSS payloads |
+| **PentesterLab** | [Session Fixation Badge](https://pentesterlab.com/) | Medium | Exploiting persistent session identifiers before and after login |
