@@ -8,6 +8,8 @@
 
 Welcome to the **Cyber_Spy.404** educational repository. This library hosts curated security research documentation, application checklists, and testing workflows derived from the *ICC Bug Bounty Notes* series. It serves as a structured, scannable handbook for learning and methodology development.
 
+> 📥 **Download Offline Edition:** Get our consolidated [**Cyber-Spy-404 Complete Bug Bounty Handbook (PDF)**](07-PDF-Downloads/Cyber-Spy-404-Bug-Bounty-Complete-Handbook.pdf) (~188 KB) or explore all 33 individual module guides in [**07-PDF-Downloads**](07-PDF-Downloads/README.md).
+
 ---
 
 ## 🛑 Security Disclaimer & Ethics
@@ -52,6 +54,10 @@ Navigate directly to specific security branches using the index below:
 * [Rate Limiting](02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md) — API restriction validations.
 * [Identity & Data](03-Authentication-and-Account-Security/) — Authentication structural auditing, JSON parameters, and system misconfiguration testing.
 * [Code Review](04-Technology-Specific/) — Security baseline audits for Django, Symfony, and general source disclosure testing.
+
+### 🪟 4. Offline Handbook & PDF Downloads (`/07-PDF-Downloads`)
+* [📕 Complete Bug Bounty Handbook (PDF)](07-PDF-Downloads/Cyber-Spy-404-Bug-Bounty-Complete-Handbook.pdf) — All-in-one consolidated multi-chapter offline handbook (~188 KB).
+* [📁 Categorized Module PDFs Index](07-PDF-Downloads/README.md) — 33 individual standalone PDF guides organized by security domain.
 
 ---
 
