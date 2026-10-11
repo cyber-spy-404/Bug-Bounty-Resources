@@ -1,0 +1,221 @@
+================================================================================
+CYBER_SPY.404 - DISCORD CHANNELS TO GITHUB LINKS MAPPING
+Repository: https://github.com/cyber-spy-404/Bug-Bounty-Resources
+================================================================================
+
+--------------------------------------------------------------------------------
+CATEGORY: Bug Bounty Notes
+--------------------------------------------------------------------------------
+
+CHANNEL: #server-side-template-injection
+  * Markdown Guide & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md
+  * PDF Download:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Remote-Code-Execution-Classes.pdf
+
+
+--------------------------------------------------------------------------------
+CATEGORY: — WEB VULNERABILITIES —
+--------------------------------------------------------------------------------
+
+CHANNEL: #🛑-injections
+  * Command Injection Guide & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Command-Injection-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Command-Injection-Security-Testing.pdf
+  * CRLF Injection Guide & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.pdf
+  * Host Header Injection Guide & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.pdf
+
+CHANNEL: #🎭-xss-and-cookies
+  * XSS Cheat Sheet (Basic & Advanced Payloads):
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.pdf
+  * XSS Testing Methods & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/XSS-Testing-Methods.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/XSS-Testing-Methods.pdf
+  * Cookie Security Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/Cookie-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/03-Authentication-and-Account-Security/Cookie-Security-Testing.pdf
+
+CHANNEL: #🔑-idor-and-authz
+  * IDOR Security Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/IDOR-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/IDOR-Security-Testing.pdf
+  * IDOR Advanced Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/IDOR-Testing-Advanced.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/IDOR-Testing-Advanced.pdf
+  * Authorization Testing (IDOR & AuthZ):
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Authorization-Testing-IDOR.md
+  * 403 Forbidden Bypass Guide & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/403-Forbidden-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/403-Forbidden-Testing.pdf
+
+CHANNEL: #🔄-csrf
+  * CSRF Security Testing Guide & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.pdf
+  * CSRF Security Testing Methods:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/CSRF-Security-Testing-Methods.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/CSRF-Security-Testing-Methods.pdf
+
+CHANNEL: #🪵-rce-and-ssti
+  * RCE & SSTI Classes Guide:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Remote-Code-Execution-Classes.pdf
+  * Command Injection Security Testing:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Command-Injection-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Command-Injection-Security-Testing.pdf
+
+CHANNEL: #🛡️-business-logic
+  * Business Logic Security Testing Guide & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Business-Logic-Security-Testing.md
+  * Denial of Service (DoS) Testing Guide:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.pdf
+
+
+--------------------------------------------------------------------------------
+CATEGORY: — RECON & MAPPING —
+--------------------------------------------------------------------------------
+
+CHANNEL: #🔍-dorking-and-shodan
+  * Google Dorking Guide:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/01-Reconnaissance/Google-Dorking-Safe-Guide.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/01-Reconnaissance/Google-Dorking-Safe-Guide.pdf
+    Interactive App: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/html%20files/google%20dorks.html
+  * GitHub Dorking Guide:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/01-Reconnaissance/GitHub-Dorking-Safe-Guide.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/01-Reconnaissance/GitHub-Dorking-Safe-Guide.pdf
+    Interactive App: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/html%20files/GitHub%20Dorking.html
+  * Shodan Dorking Guide:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/01-Reconnaissance/Shodan-Dorking-Safe-Guide.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/01-Reconnaissance/Shodan-Dorking-Safe-Guide.pdf
+    Interactive App: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/html%20files/shodan.html
+
+CHANNEL: #🎯-target-recon
+  * Recon Target-Based Strategies & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/01-Reconnaissance/Recon-Target-Based-Strategies.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/01-Reconnaissance/Recon-Target-Based-Strategies.pdf
+    Interactive App: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/html%20files/Recon%20Target%20Based.html
+  * Target Selection Strategy Guide:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/05-Research-and-Field-Notes/Target-Selection-Strategy-Guide.md
+
+CHANNEL: #⚙️-recon-tools
+  * Recon Directory:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/tree/main/01-Reconnaissance
+  * Interactive Recon Tools Suite Hub (All 6 tools in one web portal):
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/html%20files/index.html
+
+
+--------------------------------------------------------------------------------
+CATEGORY: — METHODOLOGY & GUIDES —
+--------------------------------------------------------------------------------
+
+CHANNEL: #📋-checklists
+  * Vulnerability Checklist Index & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/05-Research-and-Field-Notes/Vulnerability-Checklist-Index.pdf
+  * Bug Bounty Advance Training Checklist:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.pdf
+    Interactive App: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/html%20files/Bug%20Bounty%20Advance%20Training.html
+  * Real-World Practice Labs Master Directory:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/06-Learning-Resources/Real-World-Practice-Labs-Guide.md
+  * Learning Roadmap:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/06-Learning-Resources/Learning-Roadmap.md
+
+CHANNEL: #📥-file-upload
+  * File Upload Security Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/File-Upload-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/File-Upload-Security-Testing.pdf
+  * EXIF Metadata Privacy Testing:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/04-Technology-Specific/EXIF-Metadata-Privacy-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/04-Technology-Specific/EXIF-Metadata-Privacy-Testing.pdf
+
+CHANNEL: #⏳-rate-limiting
+  * Rate Limit Security Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Rate-Limit-Security-Testing.pdf
+
+CHANNEL: #💡-tips-and-tricks
+  * Bug Bounty Research Tips (Part 1):
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/05-Research-and-Field-Notes/Bug-Bounty-Research-Tips.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/05-Research-and-Field-Notes/Bug-Bounty-Research-Tips.pdf
+  * Bug Bounty Research Tips (Part 2):
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/05-Research-and-Field-Notes/Bug-Bounty-Research-Tips-Part-2.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/05-Research-and-Field-Notes/Bug-Bounty-Research-Tips-Part-2.pdf
+
+
+--------------------------------------------------------------------------------
+CATEGORY: — IDENTITY & DATA —
+--------------------------------------------------------------------------------
+
+CHANNEL: #🔐-authentication
+  * Authentication Bypass Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md
+  * 2FA Bypass Security Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.pdf
+  * Account Takeover (ATO) Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md
+  * Admin Panel Security Testing:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md
+  * Password Reset Checklist & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.pdf
+  * Registration Flow Testing:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/03-Authentication-and-Account-Security/Register-Vulnerability-Testing.pdf
+
+CHANNEL: #📜-api-and-json
+  * JSON Authentication Endpoint Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.pdf
+  * Mass Assignment Security Testing & Labs:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.pdf
+
+
+--------------------------------------------------------------------------------
+CATEGORY: — CODE & FRAMEWORKS —
+--------------------------------------------------------------------------------
+
+CHANNEL: #💎-framework-testing
+  * Django Security Review:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/04-Technology-Specific/Django-Security-Review.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/04-Technology-Specific/Django-Security-Review.pdf
+  * Symfony Security Review:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/04-Technology-Specific/Symfony-Security-Review.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/04-Technology-Specific/Symfony-Security-Review.pdf
+  * Jira Security Review:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/04-Technology-Specific/Jira-Security-Review.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/04-Technology-Specific/Jira-Security-Review.pdf
+
+CHANNEL: #📁-source-code-review
+  * Exposed Source Code Testing Guide:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/Exposed-Source-Code-Testing.pdf
+
+
+--------------------------------------------------------------------------------
+SPECIAL & HUB CHANNELS
+--------------------------------------------------------------------------------
+
+CHANNEL: #cs-pro-tools (under Cyber Security)
+  * Complete Consolidated Bug Bounty Handbook (All 33 Modules combined in 1 PDF):
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/Cyber-Spy-404-Bug-Bounty-Complete-Handbook.pdf
+  * Download All PDFs Directory:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/tree/main/07-PDF-Downloads
+  * Interactive Security Web Suite (Live GUI):
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/html%20files/index.html
+
+CHANNEL: #xss-scripts (under Text Channels)
+  * XSS Basic & Advanced Payloads Cheat Sheet:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.md
+    PDF: https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/07-PDF-Downloads/02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.pdf
+  * XSS Testing Methods:
+    https://github.com/cyber-spy-404/Bug-Bounty-Resources/blob/main/02-Web-Vulnerabilities/XSS-Testing-Methods.md
+================================================================================
