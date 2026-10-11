@@ -192,13 +192,17 @@ This learning roadmap provides a structured, 6-phase journey from web fundamenta
 
 ## 📚 Recommended Practice Labs & Platforms
 
+For an exhaustive, step-by-step lab breakdown with exact room recommendations, Hacker101 CTF invite milestones, and the "Dual-Screen" hunting technique, see our dedicated guide:
+👉 [**Real-World Practice Labs & Motivation Guide**](Real-World-Practice-Labs-Guide.md)
+
 | Platform | Recommended Focus | Difficulty |
 | :--- | :--- | :--- |
 | **PortSwigger Web Security Academy** | Interactive labs for IDOR, XSS, CSRF, SSRF, SQLi, and Business Logic | Beginner to Advanced |
-| **OWASP Juice Shop** | Full-stack modern JavaScript application with realistic vulnerabilities | Beginner to Intermediate |
-| **Damn Vulnerable Web Application (DVWA)** | Classic web vulnerabilities with adjustable security levels | Beginner |
-| **HackTheBox / TryHackMe** | Full machine compromise, network pivoting, and CTF challenges | Intermediate to Advanced |
-| **Bugcrowd University / Hacker101** | Structured modules designed specifically for bug bounty methodologies | All Levels |
+| **OWASP Juice Shop & crAPI** | Full-stack modern JavaScript/React applications and microservice REST APIs | Beginner to Intermediate |
+| **TryHackMe (Web Fundamentals)** | Guided browser rooms for HTTP, Burp Suite, upload attacks, and IDOR | Beginner |
+| **HackTheBox / HTB Academy (CBBH)** | Production server vulnerabilities, command injection, SSTI, and realistic machines | Intermediate to Advanced |
+| **Hacker101 CTF (HackerOne)** | Earn 26+ points to unlock priority invitations to private bug bounty programs | Beginner to Advanced |
+| **Intigriti / BugPoC Challenges** | Modern client-side bypasses, DOM clobbering, CSP evasion, prototype pollution | Advanced |
 
 ---
 

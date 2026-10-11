@@ -128,6 +128,7 @@ Structured education, milestones, training syllabi, and interactive practice tra
 | Note | Focus Area | Key Techniques |
 | :--- | :--- | :--- |
 | [**Learning-Roadmap.md**](06-Learning-Resources/Learning-Roadmap.md) | 6-Phase Master Roadmap | Beginner to advanced journey, recommended labs, core reading milestones |
+| [**Real-World-Practice-Labs-Guide.md**](06-Learning-Resources/Real-World-Practice-Labs-Guide.md) | Hands-on Labs & Motivation | PortSwigger, HTB, THM, Hacker101 CTF, crAPI, Dual-Screen hunting method |
 | [**Bug-Bounty-Advance-Training-Checklist.md**](06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.md) | Interactive Training Tracker | 55-topic progress tracker covering vulnerabilities, CVEs, and bypasses |
 
 ---
