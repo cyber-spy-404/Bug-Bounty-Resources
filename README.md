@@ -1,4 +1,4 @@
-# 🛡️ Cyber_Spy.404 — Bug Bounty Notes & Security Testing Field Guide
+# 🎭 Cyber_Spy.404 | Bug Bounty Reference Library
 
 [![Security](https://img.shields.io/badge/Focus-Bug%20Bounty%20%26%20AppSec-red.svg)](#)
 [![Notes Count](https://img.shields.io/badge/Notes-40%20Modules-blue.svg)](#)
@@ -6,38 +6,63 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Ethics](https://img.shields.io/badge/Ethics-Authorized%20Testing%20Only-brightgreen.svg)](DISCLAIMER.md)
 
-> A structured, field-tested repository of notes, testing methodologies, checklists, and safe edge-case techniques for bug bounty hunters and application security engineers. Contributed by **Cyber_Spy.404**.
+Welcome to the **Cyber_Spy.404** educational repository. This library hosts curated security research documentation, application checklists, and testing workflows derived from the *ICC Bug Bounty Notes* series. It serves as a structured, scannable handbook for learning and methodology development.
 
 ---
 
-## 📌 Repository Overview
-
-This repository organizes application security testing notes into a clean, modular hierarchy designed for rapid reference during active, authorized engagements and systematic skill building.
-
-Every module emphasizes:
-- **Scope discipline:** Adhering strictly to program rules without expanding into out-of-scope assets.
-- **Safe proof-of-concepts:** Controlled verification using dedicated test accounts without destructive actions.
-- **Root-cause understanding:** Exploring how flaws emerge, how developers attempt to patch them, and subtle bypass edge cases.
-- **Remediation guidance:** Clear, defensive recommendations to help engineering teams remediate vulnerabilities.
+## 🛑 Security Disclaimer & Ethics
+> **Important:** This repository is maintained strictly for educational research, defensive security engineering, and authorized application auditing. Unsanctioned testing, exploitation, or data gathering against unauthorized systems is strictly prohibited. All techniques detailed here must be executed inside isolated staging environments or within the explicitly defined boundaries of an approved bug bounty program.
 
 ---
 
-## 📂 Repository Architecture
+## 🛠️ Testing Environment
+Research and validation are conducted across a customized technical testing stack:
+* **Host Platform:** Windows Environment (System Administration & Development Stack)
+* **Testing Sandbox:** Intel Processor-based MacBook Pro running a customized deployment of macOS Monterey
 
-```text
-Cyber_Spy.404-Bug-Bounty-Notes/
-├── README.md                                  # Repository overview, master index & learning paths
-├── CONTRIBUTING.md                            # Contribution and note-formatting guidelines
-├── LICENSE                                    # Open source license (MIT with educational notice)
-├── DISCLAIMER.md                              # Legal disclaimer & responsible disclosure terms
-│
-├── 01-Reconnaissance/                         # Target mapping, scope strategies, and safe dorking
-├── 02-Web-Vulnerabilities/                    # Core web application & API vulnerability guides
-├── 03-Authentication-and-Account-Security/    # Auth, session lifecycle, 2FA/MFA, and ATO prevention
-├── 04-Technology-Specific/                    # Platform & framework reviews (Django, Symfony, Jira, EXIF)
-├── 05-Research-and-Field-Notes/               # Real-world field notes, research workflow, and master index
-└── 06-Learning-Resources/                     # Structured 6-phase learning roadmap & progress checklist
-```
+---
+
+## 💬 Community & Sync
+This repository maps 1-to-1 with our private Discord workspace channels. Use the direct paths inside this index to navigate the resource drops posted in the respective channel branches.
+
+* **Author:** Cyber_Spy.404
+* **Project Status:** Active Research Phase
+
+---
+
+## 📁 Repository Structure & Directory Index
+
+Navigate directly to specific security branches using the index below:
+
+### 🪟 1. Web Vulnerabilities (`/02-Web-Vulnerabilities`)
+* [Injections](02-Web-Vulnerabilities/Command-Injection-Security-Testing.md) — Technical breakdowns of Command, CRLF, and Host Header injection validation paths.
+* [XSS & Cookies](02-Web-Vulnerabilities/XSS-Testing-Methods.md) — Non-malicious verification workflows for Cross-Site Scripting.
+* [IDOR & Authorization](02-Web-Vulnerabilities/IDOR-Security-Testing.md) — Verification logs for parameter tampering, horizontal privileges, and `403` routing bypasses.
+* [CSRF](02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md) — Token implementation flaws and cross-site interaction analysis.
+* [RCE & SSTI](02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md) — Local parsing validation checks for backend engines.
+* [Business Logic](02-Web-Vulnerabilities/Business-Logic-Security-Testing.md) — Workflows for auditing multi-factor flows, account registration logic, and password flows.
+
+### 🪟 2. Reconnaissance & Mapping (`/01-Reconnaissance`)
+* [Dorking & Engines](01-Reconnaissance/Google-Dorking-Safe-Guide.md) — Scannable indices for Google Dorking structures and passive OSINT asset discovery.
+* [Target Recon](01-Reconnaissance/Recon-Target-Based-Strategies.md) — Target surface mapping and metadata examination methodologies.
+
+### 🪟 3. Methodology & Frameworks (`/05-Research-and-Field-Notes`)
+* [Audit Checklists](05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md) — General vulnerability assessment baseline lists.
+* [File Upload Bypasses](02-Web-Vulnerabilities/File-Upload-Security-Testing.md) — Multi-part request structure checks.
+* [Rate Limiting](02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md) — API restriction validations.
+* [Identity & Data](03-Authentication-and-Account-Security/) — Authentication structural auditing, JSON parameters, and system misconfiguration testing.
+* [Code Review](04-Technology-Specific/) — Security baseline audits for Django, Symfony, and general source disclosure testing.
+
+---
+
+## ⚡ Interactive Web Suite Tools (`/html files`)
+Launch any of our local browser-based security apps with dynamic parameter injection, search, and direct hands-on lab links:
+* [**Web Suite Dashboard**](html%20files/index.html) — Universal search engine across all 40 guides + Practice Labs Hub.
+* [**Google Dorks Explorer**](html%20files/google%20dorks.html) — Dynamic target domain injection & 1-click Google search launcher.
+* [**Shodan Intelligence Tool**](html%20files/shodan.html) — Host, Org, ASN filters and automated Shodan query execution.
+* [**GitHub Dorks Generator**](html%20files/GitHub%20Dorking.html) — Leaked secrets, token, and API key finder for GitHub Code Search.
+* [**Reconnaissance Matrix**](html%20files/Recon%20Target%20Based.html) — Target-based scope planner (Small/Medium/Large) and command generator.
+* [**Learning Progress Tracker**](html%20files/Bug%20Bounty%20Advance%20Training.html) — 55-topic syllabus tracker with persistent notes & lab links.
 
 ---
 
@@ -60,41 +85,41 @@ Methodology and verification guides for core server-side and client-side web app
 
 | Note | Focus Area | Key Techniques |
 | :--- | :--- | :--- |
-| [**IDOR-Security-Testing.md**](02-Web-Vulnerabilities/IDOR-Security-Testing.md) | Insecure Direct Object References | CRUD testing with dual test accounts, numeric & GUID patterns |
-| [**IDOR-Testing-Advanced.md**](02-Web-Vulnerabilities/IDOR-Testing-Advanced.md) | Advanced IDOR & BOLA | Hashed IDs, HTTP method swapping, multi-tenant boundaries |
-| [**Authorization-Testing-IDOR.md**](02-Web-Vulnerabilities/Authorization-Testing-IDOR.md) | Object-Level Access Control | Parameter swapping, API object validation, horizontal & vertical privilege |
-| [**403-Forbidden-Testing.md**](02-Web-Vulnerabilities/403-Forbidden-Testing.md) | Access Control & 403 Bypasses | Header injection (`X-Original-URL`), path normalization, HTTP methods |
-| [**Business-Logic-Security-Testing.md**](02-Web-Vulnerabilities/Business-Logic-Security-Testing.md) | Business Logic Flaws | Multi-step workflows, pricing tampering, race conditions, edge cases |
-| [**Rate-Limit-Security-Testing.md**](02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md) | Rate Limiting & Throttling | Header spoofing, IP rotation checks, concurrency tests |
-| [**XSS-Testing-Methods.md**](02-Web-Vulnerabilities/XSS-Testing-Methods.md) | Cross-Site Scripting (XSS) | Reflected, Stored, and DOM XSS methodology, context-based reflection |
-| [**XSS-Cheat-Sheet-Basic-and-Advanced.md**](02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.md) | XSS Payloads & Contexts | HTML context, attribute context, script block, SVG/event handlers |
-| [**File-Upload-Security-Testing.md**](02-Web-Vulnerabilities/File-Upload-Security-Testing.md) | Arbitrary File Uploads | Extension blacklist/whitelist bypasses, MIME-type trust, polyglots |
-| [**Host-Header-Injection-Security-Testing.md**](02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md) | Host Header Attacks | Password reset poisoning, cache poisoning, routing redirection |
-| [**Mass-Assignment-Security-Testing.md**](02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md) | Mass Assignment / Auto-Binding | Schema injection, role escalation parameters (`is_admin`, `role`) |
-| [**Exposed-Source-Code-Testing.md**](02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md) | Information Disclosure | Public `.git`, backup files (`.bak`, `.old`), sourcemap analysis |
-| [**Remote-Code-Execution-Classes.md**](02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md) | RCE Vulnerability Classes | Unsafe deserialization, SSTI, file inclusion, code evaluation |
-| [**Command-Injection-Security-Testing.md**](02-Web-Vulnerabilities/Command-Injection-Security-Testing.md) | OS Command Injection | Argument separators, blind command injection with delays, escapes |
-| [**CRLF-Injection-Security-Testing.md**](02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md) | CRLF & Response Splitting | Header injection (`%0d%0a`), cookie injection, log poisoning |
-| [**CSRF-Security-Testing-Guide.md**](02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md) | CSRF Fundamentals | Token presence, state-changing GET, `SameSite` cookie interactions |
-| [**CSRF-Security-Testing-Methods.md**](02-Web-Vulnerabilities/CSRF-Security-Testing-Methods.md) | Advanced CSRF Testing | Header-based origin validation, token stripping, JSON-based CSRF |
-| [**Denial-of-Service-Security-Testing.md**](02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md) | Application-Level DoS | ReDoS, large payload handling, hash collisions, safe verification |
+| [**IDOR-Security-Testing.md**](02-Web-Vulnerabilities/IDOR-Security-Testing.md) | Insecure Direct Object References | Parameter substitution, GUID rotation, CRUD verification, horizontal privilege escalation |
+| [**IDOR-Testing-Advanced.md**](02-Web-Vulnerabilities/IDOR-Testing-Advanced.md) | Advanced IDOR & BOLA | Multi-tenant boundaries, parameter pollution, mass export leaks, GraphQL node traversal |
+| [**Authorization-Testing-IDOR.md**](02-Web-Vulnerabilities/Authorization-Testing-IDOR.md) | Access Control & Permissions | Vertical/horizontal escalation, role matrices, status code validation, session state isolation |
+| [**403-Forbidden-Testing.md**](02-Web-Vulnerabilities/403-Forbidden-Testing.md) | 403 Forbidden Bypasses | Header spoofing (`X-Original-URL`), path traversal, case manipulation, method override |
+| [**Business-Logic-Security-Testing.md**](02-Web-Vulnerabilities/Business-Logic-Security-Testing.md) | Business Logic Flaws | Currency tampering, workflow stage skips, race conditions, negative number handling |
+| [**Rate-Limit-Security-Testing.md**](02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md) | Throttling & Rate Limiting | Header rotation, path fuzzing, method switching, distributed source requests |
+| [**XSS-Testing-Methods.md**](02-Web-Vulnerabilities/XSS-Testing-Methods.md) | Cross-Site Scripting Testing | Context breakout, filter evasion, source-to-sink tracing, CSP evaluation |
+| [**XSS-Cheat-Sheet-Basic-and-Advanced.md**](02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.md) | Safe Payloads & Polyglots | HTML attribute breakouts, JavaScript context payloads, event handlers, non-destructive alerts |
+| [**File-Upload-Security-Testing.md**](02-Web-Vulnerabilities/File-Upload-Security-Testing.md) | File Upload Vulnerabilities | Extension blacklists, MIME type tampering, magic bytes, SVG stored XSS, double extensions |
+| [**Host-Header-Injection-Security-Testing.md**](02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md) | Host Header Injection | Password reset poisoning, cache poisoning, routing-based SSRF, forward-header spoofing |
+| [**Mass-Assignment-Security-Testing.md**](02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md) | Mass Assignment / Over-Posting | Parameter addition, role-elevation injection (`is_admin: true`), schema exploration |
+| [**Exposed-Source-Code-Testing.md**](02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md) | Source Code & Backup Leaks | `.git/` folder reconstruction, `.env` file discovery, `.bak`/swap files, secret identification |
+| [**Remote-Code-Execution-Classes.md**](02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md) | RCE Vulnerability Classes | Command injection, SSTI, unsafe deserialization, file inclusion primitives |
+| [**Command-Injection-Security-Testing.md**](02-Web-Vulnerabilities/Command-Injection-Security-Testing.md) | OS Command Injection | Argument separators, blind timing checks, out-of-band detection, shell metacharacter evasion |
+| [**CRLF-Injection-Security-Testing.md**](02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md) | CRLF & HTTP Splitting | Header injection (`\r\nSet-Cookie:`), response splitting, cache deception, redirect hijacking |
+| [**CSRF-Security-Testing-Guide.md**](02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md) | Cross-Site Request Forgery | Token presence checks, method switching (`POST` to `GET`), SameSite attribute interactions |
+| [**CSRF-Security-Testing-Methods.md**](02-Web-Vulnerabilities/CSRF-Security-Testing-Methods.md) | Advanced CSRF Verification | Referer header stripping, double-submit cookie flaws, CORS preflight edge cases |
+| [**Denial-of-Service-Security-Testing.md**](02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md) | Application-Layer DoS | ReDoS detection, large payload processing, decompression bombs, safe verification thresholds |
 
 ---
 
-### 🔑 03. Authentication and Account Security
-Identification, authentication protocols, session state management, and account takeover vectors.
+### 🔐 03. Authentication and Account Security
+Auditing authentication workflows, credential lifecycle, session management, and account protections.
 
 | Note | Focus Area | Key Techniques |
 | :--- | :--- | :--- |
-| [**Register-Vulnerability-Testing.md**](03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md) | User Registration Flows | Duplicate email collision, unverified account pre-creation, role parameters |
-| [**Authentication-Endpoint-Testing.md**](03-Authentication-and-Account-Security/Authentication-Endpoint-Testing.md) | Login & Authentication APIs | Username enumeration, credential handling, error response discrepancies |
-| [**Authentication-Bypass-Security-Testing.md**](03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md) | Authentication Bypasses | Direct object requests, status code manipulation, type juggling |
-| [**JSON-Authentication-Endpoint-Testing.md**](03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md) | JSON Authentication | Content-Type tampering, SQLi/NoSQLi in JSON payloads, type confusion |
-| [**2FA-Bypass-Security-Testing.md**](03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md) | Two-Factor Authentication (2FA) | Direct endpoint access, OTP brute force, response tampering, backup codes |
-| [**Password-Reset-Security-Checklist.md**](03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md) | Password Reset Mechanisms | Token entropy, Host header poisoning, referrer leakage, token reuse |
-| [**Account-Takeover-ATO-Security-Testing.md**](03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md) | Account Takeover (ATO) | Chaining auth flaws, OAuth implementation errors, session fixation |
-| [**Admin-Panel-Security-Testing.md**](03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md) | Admin Interfaces & Portals | Path discovery, IP restriction bypasses, role verification on routes |
-| [**Cookie-Security-Testing.md**](03-Authentication-and-Account-Security/Cookie-Security-Testing.md) | Cookies & Session State | `HttpOnly`, `Secure`, `SameSite` flags, token expiration, session revival |
+| [**Register-Vulnerability-Testing.md**](03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md) | Registration Logic | Duplicate registration collisions, role injection, pre-account takeover, parameter pollution |
+| [**Authentication-Endpoint-Testing.md**](03-Authentication-and-Account-Security/Authentication-Endpoint-Testing.md) | Login Endpoints | Username enumeration, status code differentials, timing analysis, credential stuffing defenses |
+| [**Authentication-Bypass-Security-Testing.md**](03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md) | Authentication Bypasses | Direct URL access, forced browsing, response tampering (`{"auth": true}`), OAuth redirect flaws |
+| [**JSON-Authentication-Endpoint-Testing.md**](03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md) | API & JSON Auth | Content-Type switching, NoSQL injection (`$ne`), type juggling, JWT signature bypasses |
+| [**2FA-Bypass-Security-Testing.md**](03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md) | Multi-Factor Authentication | Code brute forcing without throttling, response manipulation, direct route access, token reuse |
+| [**Password-Reset-Security-Checklist.md**](03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md) | Password Reset Workflows | Token predictability, host header reset poisoning, referrer leakage, session invalidation |
+| [**Account-Takeover-ATO-Security-Testing.md**](03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md) | Account Takeover (ATO) | Vulnerability chaining, email verification race conditions, OAuth implementation flaws |
+| [**Admin-Panel-Security-Testing.md**](03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md) | Administrative Portals | Hidden path discovery, IP whitelist spoofing, credential defaults, cookie manipulation |
+| [**Cookie-Security-Testing.md**](03-Authentication-and-Account-Security/Cookie-Security-Testing.md) | Cookies & Session Security | `HttpOnly`, `Secure`, `SameSite` flags, session fixation, token entropy, invalidation on logout |
 
 ---
 
@@ -111,14 +136,14 @@ Auditing frameworks, third-party software products, and application asset handle
 ---
 
 ### 📝 05. Research and Field Notes
-Field-tested tips, mindset, report triage advice, and comprehensive index checklists.
+Field-tested tips, mindset, target selection, report triage advice, and comprehensive index checklists.
 
 | Note | Focus Area | Key Techniques |
 | :--- | :--- | :--- |
 | [**Target-Selection-Strategy-Guide.md**](05-Research-and-Field-Notes/Target-Selection-Strategy-Guide.md) | Beginner Target Selection | Solving the target selection crisis, VDP reputation pipeline, high-yield SaaS checklist |
 | [**Bug-Bounty-Research-Tips.md**](05-Research-and-Field-Notes/Bug-Bounty-Research-Tips.md) | Hunting Strategy & Workflow | Avoiding duplicate reports, target selection, finding low-hanging fruit |
 | [**Bug-Bounty-Research-Tips-Part-2.md**](05-Research-and-Field-Notes/Bug-Bounty-Research-Tips-Part-2.md) | Deep Testing & Methodology | Feature deep dives, reading JavaScript, thinking like an application developer |
-| [**Vulnerability-Checklist-Index.md**](05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md) | Master Vulnerability Index | Complete 27-category checklist spanning web, API, and framework security |
+| [**Vulnerability-Checklist-Index.md**](05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md) | Master Vulnerability Index | Complete 27-category checklist spanning web, API, and framework security + Practice Labs |
 
 ---
 
@@ -129,13 +154,11 @@ Structured education, milestones, training syllabi, and interactive practice tra
 | :--- | :--- | :--- |
 | [**Learning-Roadmap.md**](06-Learning-Resources/Learning-Roadmap.md) | 6-Phase Master Roadmap | Beginner to advanced journey, recommended labs, core reading milestones |
 | [**Real-World-Practice-Labs-Guide.md**](06-Learning-Resources/Real-World-Practice-Labs-Guide.md) | Hands-on Labs & Motivation | PortSwigger, HTB, THM, Hacker101 CTF, crAPI, Dual-Screen hunting method |
-| [**Bug-Bounty-Advance-Training-Checklist.md**](06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.md) | Interactive Training Tracker | 55-topic progress tracker covering vulnerabilities, CVEs, and bypasses |
+| [**Bug-Bounty-Advance-Training-Checklist.md**](06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.md) | Interactive Training Tracker | 55-topic progress tracker covering vulnerabilities, CVEs, bypasses + Labs |
 
 ---
 
 ## 🎯 Recommended Learning Path
-
-For researchers progressing through these materials, we recommend the following sequence:
 
 ```
 [Phase 1: Foundations]
@@ -165,8 +188,9 @@ For researchers progressing through these materials, we recommend the following 
         │
         ▼
 [Phase 5: Field Notes & Mastery]
+   └─ 05-Research-and-Field-Notes/Target-Selection-Strategy-Guide.md
    └─ 05-Research-and-Field-Notes/Bug-Bounty-Research-Tips.md
-   └─ 06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.md
+   └─ 06-Learning-Resources/Real-World-Practice-Labs-Guide.md
 ```
 
 ---
