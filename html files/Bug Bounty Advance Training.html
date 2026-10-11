@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bug Bounty Learning Tracker — Cyber_Spy.404 Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --success: #10b981;
+      --warning: #f59e0b;
+      --code-bg: #090d16;
+      --nav-bg: rgba(17, 24, 39, 0.85);
+      --radius: 12px;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    [data-theme="light"] {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #4f46e5;
+      --accent-hover: #4338ca;
+      --accent-glow: rgba(79, 70, 229, 0.15);
+      --success: #059669;
+      --warning: #d97706;
+      --code-bg: #f1f5f9;
+      --nav-bg: rgba(255, 255, 255, 0.9);
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      line-height: 1.5;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background-color: var(--nav-bg);
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 10px; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text-main);
+      background-color: var(--card-border);
+    }
+    .nav-links a.active {
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
+
+    .btn-icon {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .btn-icon:hover { border-color: var(--accent); color: var(--accent); }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+      flex: 1;
+      width: 100%;
+    }
+
+    .hero { text-align: center; margin-bottom: 30px; }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p { color: var(--text-muted); font-size: 1.05rem; max-width: 700px; margin: 0 auto; }
+
+    /* Progress Overview Card */
+    .progress-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    .progress-stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .stat-box {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .progress-bar-container {
+      background: var(--code-bg);
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6366f1, #10b981);
+      width: 0%;
+      border-radius: 6px;
+      transition: width 0.4s ease;
+    }
+
+    /* Toolbar */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .search-box { position: relative; flex: 1; min-width: 280px; }
+    .search-input {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 12px 16px 12px 42px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .search-input:focus { border-color: var(--accent); }
+    .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+
+    .category-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pill:hover { color: var(--text-main); border-color: var(--text-muted); }
+    .pill.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+    /* Topic Cards Grid */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+    }
+
+    .topic-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .topic-card.completed {
+      opacity: 0.7;
+      border-color: var(--success);
+    }
+
+    .topic-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .topic-category-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--code-bg);
+      color: var(--accent);
+      border: 1px solid var(--card-border);
+    }
+
+    .topic-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .btn-check {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .btn-check:hover, .btn-check.checked { background: var(--success); color: white; border-color: var(--success); }
+
+    .topic-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .doc-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .doc-link:hover { text-decoration: underline; }
+
+    .topic-notes {
+      width: 100%;
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      outline: none;
+      resize: vertical;
+      margin-top: 8px;
+      min-height: 40px;
+      font-family: inherit;
+    }
+    .topic-notes:focus { border-color: var(--accent); }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px);
+      display: none; align-items: center; justify-content: center;
+      z-index: 1000; padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius); width: 100%; max-width: 500px; padding: 24px;
+    }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .modal-close { background: transparent; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; }
+    .modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
+
+    .toast {
+      position: fixed; bottom: 24px; right: 24px;
+      background: var(--success); color: white;
+      padding: 10px 18px; border-radius: 8px; font-weight: 600;
+      font-size: 0.875rem; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transform: translateY(100px); opacity: 0;
+      transition: all 0.3s ease; z-index: 2000;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 24px; text-align: center;
+      color: var(--text-muted); font-size: 0.85rem;
+      background: var(--card-bg); margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .top-nav { flex-direction: column; gap: 12px; }
+      .topics-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="index.html" class="brand">
+      <span>🛡️ Cyber_Spy.404</span>
+      <span class="brand-badge">PROGRESS TRACKER</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="google dorks.html">Google Dorks</a></li>
+      <li><a href="shodan.html">Shodan</a></li>
+      <li><a href="GitHub Dorking.html">GitHub</a></li>
+      <li><a href="Recon Target Based.html">Recon Matrix</a></li>
+      <li><a href="Bug Bounty Advance Training.html" class="active">Tracker</a></li>
+    </ul>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn-icon" id="themeToggle">🌙 Theme</button>
+      <button class="btn-icon" id="exportBtn">📥 Export Progress</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="hero">
+      <h1>Bug Bounty Learning & Training Tracker</h1>
+      <p>55 core domains spanning web vulnerabilities, access control bypasses, framework reviews, CVEs, and recon methodologies with local progress persistence.</p>
+    </header>
+
+    <!-- Progress Card -->
+    <section class="progress-card">
+      <div class="progress-stats-row">
+        <div class="stat-box">
+          <div class="stat-number" id="totalTopicsNum">55</div>
+          <div class="stat-label">Total Modules</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="completedTopicsNum" style="color: var(--success);">0</div>
+          <div class="stat-label">Completed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="remainingTopicsNum" style="color: var(--warning);">55</div>
+          <div class="stat-label">Remaining</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="percentNum">0%</div>
+          <div class="stat-label">Mastery Rate</div>
+        </div>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+    </section>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="topicSearch" class="search-input" placeholder="Search topics (e.g. IDOR, XSS, 2FA, JWT, Nuclei)...">
+      </div>
+      <div class="category-pills">
+        <button class="pill active" data-category="all">All</button>
+        <button class="pill" data-category="vulnerabilities">Vulnerabilities</button>
+        <button class="pill" data-category="bypasses">Bypasses</button>
+        <button class="pill" data-category="auth">Authentication</button>
+        <button class="pill" data-category="tech">Technologies</button>
+        <button class="pill" data-category="recon">Recon</button>
+        <button class="pill" data-category="custom">My Custom</button>
+      </div>
+      <button class="btn-icon" id="openAddModalBtn" style="border-color: var(--accent); color: var(--accent);">
+        ➕ Add Custom Topic
+      </button>
+    </div>
+
+    <main class="topics-grid" id="topicsGrid"></main>
+  </div>
+
+  <!-- Add Custom Topic Modal -->
+  <div class="modal-overlay" id="addModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Add Custom Learning Topic</h3>
+        <button class="modal-close" id="closeAddModalBtn">&times;</button>
+      </div>
+      <form id="addTopicForm">
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Topic Name</label>
+          <input type="text" id="modalTopicName" class="search-input" style="padding-left: 12px;" placeholder="e.g. GraphQL Batching Attacks" required>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 4px;">Category</label>
+          <select id="modalCategory" class="search-input" style="padding-left: 12px; height: 44px;">
+            <option value="vulnerabilities">Vulnerabilities</option>
+            <option value="bypasses">Bypasses</option>
+            <option value="auth">Authentication</option>
+            <option value="tech">Technologies</option>
+            <option value="recon">Recon</option>
+            <option value="custom" selected>My Custom</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-icon" id="cancelAddBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Add Topic</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toastNotification">Action complete!</div>
+
+  <footer>
+    <p>&copy; 2026 Cyber_Spy.404 | Bug Bounty Notes & Security Suite — Strictly for Authorized Testing & Research</p>
+  </footer>
+
+  <script>
+    const defaultTopics = [
+      // Vulnerabilities
+      { id: "v-1", name: "Insecure Direct Object References (IDOR)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/IDOR-Security-Testing.md" },
+      { id: "v-2", name: "Cross Site Scripting (XSS)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/XSS-Testing-Methods.md" },
+      { id: "v-3", name: "Cross Site Request Forgery (CSRF)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md" },
+      { id: "v-4", name: "Arbitrary File Upload", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/File-Upload-Security-Testing.md" },
+      { id: "v-5", name: "Host Header Injection", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" },
+      { id: "v-6", name: "Mass Assignment", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md" },
+      { id: "v-7", name: "Exposed Source Code (.git, .env)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md" },
+      { id: "v-8", name: "Remote Code Execution (RCE)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
+      { id: "v-9", name: "OS Command Injection", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Command-Injection-Security-Testing.md" },
+      { id: "v-10", name: "CRLF Injection / HTTP Splitting", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md" },
+      { id: "v-11", name: "Denial of Service (DoS)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md" },
+      { id: "v-12", name: "Business Logic Flaws", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" },
+      { id: "v-13", name: "SQL Injection (SQLi)", category: "vulnerabilities", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" },
+      { id: "v-14", name: "Server Side Request Forgery (SSRF)", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" },
+      { id: "v-15", name: "NoSQL Injection (NoSQLi)", category: "vulnerabilities", docLink: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" },
+      { id: "v-16", name: "Open Redirect", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" },
+      { id: "v-17", name: "Local File Inclusion (LFI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
+      { id: "v-18", name: "Remote File Inclusion (RFI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
+      { id: "v-19", name: "Web Cache Deception", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" },
+      { id: "v-20", name: "Web Cache Poisoning", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" },
+      { id: "v-21", name: "Reflected File Download (RFD)", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" },
+      { id: "v-22", name: "Server Side Template Injection (SSTI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
+      { id: "v-23", name: "WordPress CMS Vulnerabilities", category: "vulnerabilities", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" },
+
+      // Bypasses
+      { id: "b-1", name: "Bypass 2FA (Two-Factor Authentication)", category: "bypasses", docLink: "../03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md" },
+      { id: "b-2", name: "Bypass 403 Forbidden", category: "bypasses", docLink: "../02-Web-Vulnerabilities/403-Forbidden-Testing.md" },
+      { id: "b-3", name: "Bypass Rate Limit / 429 Too Many Requests", category: "bypasses", docLink: "../02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md" },
+      { id: "b-4", name: "Bypass Captcha Implementation", category: "bypasses", docLink: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" },
+
+      // Authentication
+      { id: "a-1", name: "Account Takeover (ATO) Vectors", category: "auth", docLink: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" },
+      { id: "a-2", name: "Registration Functionality Testing", category: "auth", docLink: "../03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md" },
+      { id: "a-3", name: "Forgot Password Functionality", category: "auth", docLink: "../03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md" },
+      { id: "a-4", name: "Authentication Endpoint & Credential Audits", category: "auth", docLink: "../03-Authentication-and-Account-Security/Authentication-Endpoint-Testing.md" },
+      { id: "a-5", name: "Authentication Bypass Techniques", category: "auth", docLink: "../03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md" },
+      { id: "a-6", name: "JSON Authentication & API Security", category: "auth", docLink: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" },
+      { id: "a-7", name: "Admin Panel & Portal Discovery", category: "auth", docLink: "../03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md" },
+      { id: "a-8", name: "Cookie & Session Lifecycle Security", category: "auth", docLink: "../03-Authentication-and-Account-Security/Cookie-Security-Testing.md" },
+
+      // Technologies
+      { id: "t-1", name: "Django Framework Security Review", category: "tech", docLink: "../04-Technology-Specific/Django-Security-Review.md" },
+      { id: "t-2", name: "Symfony Framework Security Review", category: "tech", docLink: "../04-Technology-Specific/Symfony-Security-Review.md" },
+      { id: "t-3", name: "Atlassian Jira Security Review", category: "tech", docLink: "../04-Technology-Specific/Jira-Security-Review.md" },
+      { id: "t-4", name: "EXIF Metadata Privacy Testing", category: "tech", docLink: "../04-Technology-Specific/EXIF-Metadata-Privacy-Testing.md" },
+      { id: "t-5", name: "Adobe Experience Manager (AEM) Misconfig", category: "tech", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" },
+      { id: "t-6", name: "OAuth 2.0 & OpenID Connect Testing", category: "tech", docLink: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" },
+
+      // Recon
+      { id: "r-1", name: "Target-Based Scope Recon Strategies", category: "recon", docLink: "../01-Reconnaissance/Recon-Target-Based-Strategies.md" },
+      { id: "r-2", name: "Google Dorking for Bug Bounty", category: "recon", docLink: "../01-Reconnaissance/Google-Dorking-Safe-Guide.md" },
+      { id: "r-3", name: "GitHub Dorking for Leaked Secrets", category: "recon", docLink: "../01-Reconnaissance/GitHub-Dorking-Safe-Guide.md" },
+      { id: "r-4", name: "Shodan Intelligence & Network Scans", category: "recon", docLink: "../01-Reconnaissance/Shodan-Dorking-Safe-Guide.md" },
+      { id: "r-5", name: "Subdomain Enumeration & Takeovers", category: "recon", docLink: "Recon Target Based.html" },
+      { id: "r-6", name: "Fast Automation Pipelines & Nuclei", category: "recon", docLink: "Recon Target Based.html" }
+    ];
+
+    let state = {
+      activeCategory: 'all',
+      searchQuery: '',
+      customTopics: JSON.parse(localStorage.getItem('cs_custom_tracker_topics') || '[]'),
+      checkedTopics: JSON.parse(localStorage.getItem('cs_tracker_checked') || '{}'),
+      notes: JSON.parse(localStorage.getItem('cs_tracker_notes') || '{}'),
+      theme: localStorage.getItem('cs_theme') || 'dark'
+    };
+
+    const topicsGrid = document.getElementById('topicsGrid');
+    const topicSearch = document.getElementById('topicSearch');
+    const categoryPills = document.querySelectorAll('.pill');
+    const totalTopicsNum = document.getElementById('totalTopicsNum');
+    const completedTopicsNum = document.getElementById('completedTopicsNum');
+    const remainingTopicsNum = document.getElementById('remainingTopicsNum');
+    const percentNum = document.getElementById('percentNum');
+    const progressFill = document.getElementById('progressFill');
+    const themeToggle = document.getElementById('themeToggle');
+    const exportBtn = document.getElementById('exportBtn');
+    const toast = document.getElementById('toastNotification');
+
+    const addModal = document.getElementById('addModal');
+    const openAddModalBtn = document.getElementById('openAddModalBtn');
+    const closeAddModalBtn = document.getElementById('closeAddModalBtn');
+    const cancelAddBtn = document.getElementById('cancelAddBtn');
+    const addTopicForm = document.getElementById('addTopicForm');
+
+    function init() {
+      applyTheme(state.theme);
+      render();
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      themeToggle.textContent = theme === 'dark' ? '🌙 Theme' : '☀️ Theme';
+      localStorage.setItem('cs_theme', theme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      state.theme = state.theme === 'dark' ? 'light' : 'dark';
+      applyTheme(state.theme);
+    });
+
+    function render() {
+      const allTopics = [...defaultTopics, ...state.customTopics];
+      const filtered = allTopics.filter(topic => {
+        const matchesCat = state.activeCategory === 'all' || topic.category === state.activeCategory;
+        const matchesQuery = !state.searchQuery || topic.name.toLowerCase().includes(state.searchQuery.toLowerCase());
+        return matchesCat && matchesQuery;
+      });
+
+      topicsGrid.innerHTML = '';
+      let completedCount = 0;
+
+      allTopics.forEach(t => {
+        if (state.checkedTopics[t.id]) completedCount++;
+      });
+
+      filtered.forEach(topic => {
+        const isDone = !!state.checkedTopics[topic.id];
+        const userNote = state.notes[topic.id] || '';
+
+        const card = document.createElement('article');
+        card.className = `topic-card ${isDone ? 'completed' : ''}`;
+        card.innerHTML = `
+          <div>
+            <div class="topic-card-header">
+              <span class="topic-category-badge">${topic.category}</span>
+              <button class="btn-check ${isDone ? 'checked' : ''}" data-id="${topic.id}">
+                ${isDone ? '✓' : '○'}
+              </button>
+            </div>
+            <h3 class="topic-name">${topic.name}</h3>
+            <textarea class="topic-notes" data-id="${topic.id}" placeholder="My study notes, checklist tips, or lab URLs...">${escapeHtml(userNote)}</textarea>
+          </div>
+          <div class="topic-meta">
+            ${topic.docLink ? `<a href="${topic.docLink}" class="doc-link">📖 View Field Note &rarr;</a>` : '<span></span>'}
+            <span style="font-size: 0.75rem; color: ${isDone ? 'var(--success)' : 'var(--text-muted)'}; font-weight: 600;">
+              ${isDone ? 'COMPLETED' : 'PENDING'}
+            </span>
+          </div>
+        `;
+        topicsGrid.appendChild(card);
+      });
+
+      // Update Top Metrics
+      const total = allTopics.length;
+      const remaining = total - completedCount;
+      const rate = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+
+      totalTopicsNum.textContent = total;
+      completedTopicsNum.textContent = completedCount;
+      remainingTopicsNum.textContent = remaining;
+      percentNum.textContent = `${rate}%`;
+      progressFill.style.width = `${rate}%`;
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    topicSearch.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value.trim();
+      render();
+    });
+
+    categoryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        categoryPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        state.activeCategory = pill.dataset.category;
+        render();
+      });
+    });
+
+    topicsGrid.addEventListener('click', (e) => {
+      const checkBtn = e.target.closest('.btn-check');
+      if (checkBtn) {
+        const id = checkBtn.dataset.id;
+        if (state.checkedTopics[id]) delete state.checkedTopics[id];
+        else state.checkedTopics[id] = true;
+        localStorage.setItem('cs_tracker_checked', JSON.stringify(state.checkedTopics));
+        render();
+      }
+    });
+
+    topicsGrid.addEventListener('input', (e) => {
+      if (e.target.classList.contains('topic-notes')) {
+        const id = e.target.dataset.id;
+        state.notes[id] = e.target.value;
+        localStorage.setItem('cs_tracker_notes', JSON.stringify(state.notes));
+      }
+    });
+
+    openAddModalBtn.addEventListener('click', () => addModal.classList.add('active'));
+    closeAddModalBtn.addEventListener('click', () => addModal.classList.remove('active'));
+    cancelAddBtn.addEventListener('click', () => addModal.classList.remove('active'));
+
+    addTopicForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newTopic = {
+        id: 'cust-t-' + Date.now(),
+        name: document.getElementById('modalTopicName').value.trim(),
+        category: document.getElementById('modalCategory').value,
+        docLink: ''
+      };
+      state.customTopics.push(newTopic);
+      localStorage.setItem('cs_custom_tracker_topics', JSON.stringify(state.customTopics));
+      addModal.classList.remove('active');
+      addTopicForm.reset();
+      showToast('Custom learning topic added!');
+      render();
+    });
+
+    exportBtn.addEventListener('click', () => {
+      const allTopics = [...defaultTopics, ...state.customTopics];
+      let md = `# Bug Bounty Learning Progress Report\n# Exported: ${new Date().toISOString()}\n\n`;
+      allTopics.forEach(t => {
+        const status = state.checkedTopics[t.id] ? '[x]' : '[ ]';
+        const note = state.notes[t.id] || 'None recorded';
+        md += `- ${status} **${t.name}** [${t.category}]\n  - Notes: ${note}\n\n`;
+      });
+      const blob = new Blob([md], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `learning-progress-${new Date().toISOString().split('T')[0]}.md`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Exported learning progress report!');
+    });
+
+    init();
+  </script>
+</body>
+</html>
