@@ -310,6 +310,28 @@
       border-top: 1px solid var(--card-border);
     }
 
+    
+    .lab-link {
+      color: var(--success);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      transition: all 0.2s ease;
+    }
+    .lab-link:hover {
+      background: rgba(16, 185, 129, 0.25);
+      color: var(--success);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
     .doc-link {
       color: var(--accent);
       text-decoration: none;
@@ -502,61 +524,61 @@
   <script>
     const defaultTopics = [
       // Vulnerabilities
-      { id: "v-1", name: "Insecure Direct Object References (IDOR)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/IDOR-Security-Testing.md" },
-      { id: "v-2", name: "Cross Site Scripting (XSS)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/XSS-Testing-Methods.md" },
-      { id: "v-3", name: "Cross Site Request Forgery (CSRF)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md" },
-      { id: "v-4", name: "Arbitrary File Upload", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/File-Upload-Security-Testing.md" },
-      { id: "v-5", name: "Host Header Injection", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" },
-      { id: "v-6", name: "Mass Assignment", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md" },
-      { id: "v-7", name: "Exposed Source Code (.git, .env)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md" },
-      { id: "v-8", name: "Remote Code Execution (RCE)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
-      { id: "v-9", name: "OS Command Injection", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Command-Injection-Security-Testing.md" },
-      { id: "v-10", name: "CRLF Injection / HTTP Splitting", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md" },
-      { id: "v-11", name: "Denial of Service (DoS)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md" },
-      { id: "v-12", name: "Business Logic Flaws", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" },
-      { id: "v-13", name: "SQL Injection (SQLi)", category: "vulnerabilities", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" },
-      { id: "v-14", name: "Server Side Request Forgery (SSRF)", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" },
-      { id: "v-15", name: "NoSQL Injection (NoSQLi)", category: "vulnerabilities", docLink: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" },
-      { id: "v-16", name: "Open Redirect", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" },
-      { id: "v-17", name: "Local File Inclusion (LFI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
-      { id: "v-18", name: "Remote File Inclusion (RFI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
-      { id: "v-19", name: "Web Cache Deception", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" },
-      { id: "v-20", name: "Web Cache Poisoning", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" },
-      { id: "v-21", name: "Reflected File Download (RFD)", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" },
-      { id: "v-22", name: "Server Side Template Injection (SSTI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
-      { id: "v-23", name: "WordPress CMS Vulnerabilities", category: "vulnerabilities", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" },
+      { id: "v-1", name: "Insecure Direct Object References (IDOR)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/IDOR-Security-Testing.md" , labLink: "https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter" },
+      { id: "v-2", name: "Cross Site Scripting (XSS)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/XSS-Testing-Methods.md" , labLink: "https://portswigger.net/web-security/cross-site-scripting" },
+      { id: "v-3", name: "Cross Site Request Forgery (CSRF)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md" , labLink: "https://portswigger.net/web-security/csrf" },
+      { id: "v-4", name: "Arbitrary File Upload", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/File-Upload-Security-Testing.md" , labLink: "https://portswigger.net/web-security/file-upload" },
+      { id: "v-5", name: "Host Header Injection", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" , labLink: "https://portswigger.net/web-security/host-header" },
+      { id: "v-6", name: "Mass Assignment", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md" , labLink: "https://portswigger.net/web-security/api-testing/lab-bypassing-access-controls-via-mass-assignment" },
+      { id: "v-7", name: "Exposed Source Code (.git, .env)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md" , labLink: "https://app.hackthebox.com/machines/Pilgrimage" },
+      { id: "v-8", name: "Remote Code Execution (RCE)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" , labLink: "https://portswigger.net/web-security/os-command-injection" },
+      { id: "v-9", name: "OS Command Injection", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Command-Injection-Security-Testing.md" , labLink: "https://portswigger.net/web-security/os-command-injection" },
+      { id: "v-10", name: "CRLF Injection / HTTP Splitting", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md" , labLink: "https://pentesterlab.com/" },
+      { id: "v-11", name: "Denial of Service (DoS)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md" , labLink: "https://portswigger.net/web-security/prototype-pollution/server-side" },
+      { id: "v-12", name: "Business Logic Flaws", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" , labLink: "https://portswigger.net/web-security/logic-flaws" },
+      { id: "v-13", name: "SQL Injection (SQLi)", category: "vulnerabilities", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" , labLink: "https://portswigger.net/web-security/sql-injection" },
+      { id: "v-14", name: "Server Side Request Forgery (SSRF)", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" , labLink: "https://portswigger.net/web-security/ssrf" },
+      { id: "v-15", name: "NoSQL Injection (NoSQLi)", category: "vulnerabilities", docLink: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" , labLink: "https://portswigger.net/web-security/nosql-injection" },
+      { id: "v-16", name: "Open Redirect", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" , labLink: "https://portswigger.net/web-security/oauth/lab-oauth-account-hijacking-via-redirect-uri" },
+      { id: "v-17", name: "Local File Inclusion (LFI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" , labLink: "https://portswigger.net/web-security/file-path-traversal" },
+      { id: "v-18", name: "Remote File Inclusion (RFI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" , labLink: "https://tryhackme.com/room/fileinc" },
+      { id: "v-19", name: "Web Cache Deception", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" , labLink: "https://portswigger.net/web-security/web-cache-poisoning" },
+      { id: "v-20", name: "Web Cache Poisoning", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" , labLink: "https://portswigger.net/web-security/web-cache-poisoning" },
+      { id: "v-21", name: "Reflected File Download (RFD)", category: "vulnerabilities", docLink: "../06-Learning-Resources/Learning-Roadmap.md" , labLink: "https://owasp.org/" },
+      { id: "v-22", name: "Server Side Template Injection (SSTI)", category: "vulnerabilities", docLink: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" , labLink: "https://portswigger.net/web-security/server-side-template-injection" },
+      { id: "v-23", name: "WordPress CMS Vulnerabilities", category: "vulnerabilities", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" , labLink: "https://tryhackme.com/room/wordpresscve202129447" },
 
       // Bypasses
-      { id: "b-1", name: "Bypass 2FA (Two-Factor Authentication)", category: "bypasses", docLink: "../03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md" },
-      { id: "b-2", name: "Bypass 403 Forbidden", category: "bypasses", docLink: "../02-Web-Vulnerabilities/403-Forbidden-Testing.md" },
-      { id: "b-3", name: "Bypass Rate Limit / 429 Too Many Requests", category: "bypasses", docLink: "../02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md" },
-      { id: "b-4", name: "Bypass Captcha Implementation", category: "bypasses", docLink: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" },
+      { id: "b-1", name: "Bypass 2FA (Two-Factor Authentication)", category: "bypasses", docLink: "../03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md" , labLink: "https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic" },
+      { id: "b-2", name: "Bypass 403 Forbidden", category: "bypasses", docLink: "../02-Web-Vulnerabilities/403-Forbidden-Testing.md" , labLink: "https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented" },
+      { id: "b-3", name: "Bypass Rate Limit / 429 Too Many Requests", category: "bypasses", docLink: "../02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md" , labLink: "https://portswigger.net/web-security/authentication/password-based/lab-broken-bruteforce-protection-ip-block" },
+      { id: "b-4", name: "Bypass Captcha Implementation", category: "bypasses", docLink: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" , labLink: "https://owasp.org/www-project-juice-shop/" },
 
       // Authentication
-      { id: "a-1", name: "Account Takeover (ATO) Vectors", category: "auth", docLink: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" },
-      { id: "a-2", name: "Registration Functionality Testing", category: "auth", docLink: "../03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md" },
-      { id: "a-3", name: "Forgot Password Functionality", category: "auth", docLink: "../03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md" },
-      { id: "a-4", name: "Authentication Endpoint & Credential Audits", category: "auth", docLink: "../03-Authentication-and-Account-Security/Authentication-Endpoint-Testing.md" },
-      { id: "a-5", name: "Authentication Bypass Techniques", category: "auth", docLink: "../03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md" },
-      { id: "a-6", name: "JSON Authentication & API Security", category: "auth", docLink: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" },
-      { id: "a-7", name: "Admin Panel & Portal Discovery", category: "auth", docLink: "../03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md" },
-      { id: "a-8", name: "Cookie & Session Lifecycle Security", category: "auth", docLink: "../03-Authentication-and-Account-Security/Cookie-Security-Testing.md" },
+      { id: "a-1", name: "Account Takeover (ATO) Vectors", category: "auth", docLink: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" , labLink: "https://portswigger.net/web-security/oauth" },
+      { id: "a-2", name: "Registration Functionality Testing", category: "auth", docLink: "../03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md" , labLink: "https://owasp.org/www-project-juice-shop/" },
+      { id: "a-3", name: "Forgot Password Functionality", category: "auth", docLink: "../03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md" , labLink: "https://portswigger.net/web-security/host-header/lab-host-header-basic-password-reset-poisoning" },
+      { id: "a-4", name: "Authentication Endpoint & Credential Audits", category: "auth", docLink: "../03-Authentication-and-Account-Security/Authentication-Endpoint-Testing.md" , labLink: "https://portswigger.net/web-security/authentication" },
+      { id: "a-5", name: "Authentication Bypass Techniques", category: "auth", docLink: "../03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md" , labLink: "https://tryhackme.com/room/authenticationbypass" },
+      { id: "a-6", name: "JSON Authentication & API Security", category: "auth", docLink: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" , labLink: "https://portswigger.net/web-security/jwt" },
+      { id: "a-7", name: "Admin Panel & Portal Discovery", category: "auth", docLink: "../03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md" , labLink: "https://portswigger.net/web-security/access-control" },
+      { id: "a-8", name: "Cookie & Session Lifecycle Security", category: "auth", docLink: "../03-Authentication-and-Account-Security/Cookie-Security-Testing.md" , labLink: "https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions" },
 
       // Technologies
-      { id: "t-1", name: "Django Framework Security Review", category: "tech", docLink: "../04-Technology-Specific/Django-Security-Review.md" },
-      { id: "t-2", name: "Symfony Framework Security Review", category: "tech", docLink: "../04-Technology-Specific/Symfony-Security-Review.md" },
-      { id: "t-3", name: "Atlassian Jira Security Review", category: "tech", docLink: "../04-Technology-Specific/Jira-Security-Review.md" },
-      { id: "t-4", name: "EXIF Metadata Privacy Testing", category: "tech", docLink: "../04-Technology-Specific/EXIF-Metadata-Privacy-Testing.md" },
-      { id: "t-5", name: "Adobe Experience Manager (AEM) Misconfig", category: "tech", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" },
-      { id: "t-6", name: "OAuth 2.0 & OpenID Connect Testing", category: "tech", docLink: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" },
+      { id: "t-1", name: "Django Framework Security Review", category: "tech", docLink: "../04-Technology-Specific/Django-Security-Review.md" , labLink: "https://tryhackme.com/room/django" },
+      { id: "t-2", name: "Symfony Framework Security Review", category: "tech", docLink: "../04-Technology-Specific/Symfony-Security-Review.md" , labLink: "https://pentesterlab.com/" },
+      { id: "t-3", name: "Atlassian Jira Security Review", category: "tech", docLink: "../04-Technology-Specific/Jira-Security-Review.md" , labLink: "https://tryhackme.com/room/jira" },
+      { id: "t-4", name: "EXIF Metadata Privacy Testing", category: "tech", docLink: "../04-Technology-Specific/EXIF-Metadata-Privacy-Testing.md" , labLink: "https://tryhackme.com/room/metadataextraction" },
+      { id: "t-5", name: "Adobe Experience Manager (AEM) Misconfig", category: "tech", docLink: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" , labLink: "https://github.com/0ang3el/aem-hacker" },
+      { id: "t-6", name: "OAuth 2.0 & OpenID Connect Testing", category: "tech", docLink: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" , labLink: "https://portswigger.net/web-security/oauth" },
 
       // Recon
-      { id: "r-1", name: "Target-Based Scope Recon Strategies", category: "recon", docLink: "../01-Reconnaissance/Recon-Target-Based-Strategies.md" },
-      { id: "r-2", name: "Google Dorking for Bug Bounty", category: "recon", docLink: "../01-Reconnaissance/Google-Dorking-Safe-Guide.md" },
-      { id: "r-3", name: "GitHub Dorking for Leaked Secrets", category: "recon", docLink: "../01-Reconnaissance/GitHub-Dorking-Safe-Guide.md" },
-      { id: "r-4", name: "Shodan Intelligence & Network Scans", category: "recon", docLink: "../01-Reconnaissance/Shodan-Dorking-Safe-Guide.md" },
-      { id: "r-5", name: "Subdomain Enumeration & Takeovers", category: "recon", docLink: "Recon Target Based.html" },
-      { id: "r-6", name: "Fast Automation Pipelines & Nuclei", category: "recon", docLink: "Recon Target Based.html" }
+      { id: "r-1", name: "Target-Based Scope Recon Strategies", category: "recon", docLink: "../01-Reconnaissance/Recon-Target-Based-Strategies.md" , labLink: "https://tryhackme.com/room/passiverecon" },
+      { id: "r-2", name: "Google Dorking for Bug Bounty", category: "recon", docLink: "../01-Reconnaissance/Google-Dorking-Safe-Guide.md" , labLink: "https://tryhackme.com/room/googledorking" },
+      { id: "r-3", name: "GitHub Dorking for Leaked Secrets", category: "recon", docLink: "../01-Reconnaissance/GitHub-Dorking-Safe-Guide.md" , labLink: "https://tryhackme.com/room/githappens" },
+      { id: "r-4", name: "Shodan Intelligence & Network Scans", category: "recon", docLink: "../01-Reconnaissance/Shodan-Dorking-Safe-Guide.md" , labLink: "https://tryhackme.com/room/shodan" },
+      { id: "r-5", name: "Subdomain Enumeration & Takeovers", category: "recon", docLink: "Recon Target Based.html" , labLink: "https://tryhackme.com/room/subdomainenumeration" },
+      { id: "r-6", name: "Fast Automation Pipelines & Nuclei", category: "recon", docLink: "Recon Target Based.html" , labLink: "https://tryhackme.com/room/ffuf" }
     ];
 
     let state = {
@@ -635,7 +657,10 @@
             <textarea class="topic-notes" data-id="${topic.id}" placeholder="My study notes, checklist tips, or lab URLs...">${escapeHtml(userNote)}</textarea>
           </div>
           <div class="topic-meta">
-            ${topic.docLink ? `<a href="${topic.docLink}" class="doc-link">📖 View Field Note &rarr;</a>` : '<span></span>'}
+            <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+              ${topic.docLink ? `<a href="${topic.docLink}" class="doc-link">📖 Note</a>` : ''}
+              ${topic.labLink ? `<a href="${topic.labLink}" target="_blank" rel="noopener" class="lab-link">🧪 Lab ↗</a>` : ''}
+            </div>
             <span style="font-size: 0.75rem; color: ${isDone ? 'var(--success)' : 'var(--text-muted)'}; font-weight: 600;">
               ${isDone ? 'COMPLETED' : 'PENDING'}
             </span>

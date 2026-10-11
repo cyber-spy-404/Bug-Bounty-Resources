@@ -245,6 +245,67 @@
       gap: 6px;
     }
 
+    
+    .note-lab-tag {
+      font-size: 0.72rem;
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .note-lab-tag:hover {
+      background: rgba(16, 185, 129, 0.25);
+      color: #10b981;
+    }
+
+    /* Labs Motivation Banner Grid */
+    .labs-banner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .lab-box {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 18px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .lab-box:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+    }
+    .lab-box-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .lab-box-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+    .lab-box-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
     /* Knowledge Search & Explorer */
     .knowledge-panel {
       background: var(--card-bg);
@@ -414,6 +475,48 @@
       </a>
     </div>
 
+    
+    <!-- Hands-On Practice Labs & Motivation Hub -->
+    <section class="knowledge-panel" style="margin-top: 30px;">
+      <h2 class="section-title">🔥 Hands-On Practice Labs & Motivation Hub</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">
+        Master vulnerabilities in legal, sandboxed environments before hunting on live bug bounty scopes:
+      </p>
+      <div class="labs-banner-grid">
+        <a href="https://portswigger.net/web-security" target="_blank" rel="noopener" class="lab-box">
+          <div>
+            <div class="lab-box-title"><span>🎯</span> PortSwigger Academy</div>
+            <p class="lab-box-desc">Free interactive labs for IDOR, XSS, CSRF, SSRF, SQLi, and Business Logic flaws with Burp Suite integration.</p>
+          </div>
+          <div class="lab-box-badge">100% Free · Gold Standard &rarr;</div>
+        </a>
+
+        <a href="https://tryhackme.com/" target="_blank" rel="noopener" class="lab-box">
+          <div>
+            <div class="lab-box-title"><span>🛡️</span> TryHackMe Pathways</div>
+            <p class="lab-box-desc">Guided browser rooms for Web Fundamentals, Upload Vulnerabilities, Command Injection, and Recon.</p>
+          </div>
+          <div class="lab-box-badge">Guided Practice Rooms &rarr;</div>
+        </a>
+
+        <a href="https://ctf.hacker101.com/" target="_blank" rel="noopener" class="lab-box">
+          <div>
+            <div class="lab-box-title"><span>🏆</span> Hacker101 CTF</div>
+            <p class="lab-box-desc">Earn 26+ points on official HackerOne challenges to unlock priority invitations to private bug bounty programs!</p>
+          </div>
+          <div class="lab-box-badge">Unlocks Private Invites &rarr;</div>
+        </a>
+
+        <a href="https://academy.hackthebox.com/" target="_blank" rel="noopener" class="lab-box">
+          <div>
+            <div class="lab-box-title"><span>📦</span> HTB Bug Bounty Path</div>
+            <p class="lab-box-desc">Production server vulnerabilities, real CMS compromises, parameter pollution, and machine exploitation.</p>
+          </div>
+          <div class="lab-box-badge">CBBH Role Path &rarr;</div>
+        </a>
+      </div>
+    </section>
+
     <!-- Quick Search Across All 40 Markdown Notes -->
     <section class="knowledge-panel">
       <h2 class="section-title">📚 Field Notes & Vulnerability Guides Explorer</h2>
@@ -435,58 +538,58 @@
   <script>
     const allGuides = [
       // Recon
-      { title: "Target-Based Recon Strategies", cat: "01-Reconnaissance", url: "../01-Reconnaissance/Recon-Target-Based-Strategies.md" },
-      { title: "Google Dorking Safe Guide", cat: "01-Reconnaissance", url: "../01-Reconnaissance/Google-Dorking-Safe-Guide.md" },
-      { title: "GitHub Dorking Safe Guide", cat: "01-Reconnaissance", url: "../01-Reconnaissance/GitHub-Dorking-Safe-Guide.md" },
-      { title: "Shodan Dorking Safe Guide", cat: "01-Reconnaissance", url: "../01-Reconnaissance/Shodan-Dorking-Safe-Guide.md" },
+      { title: "Target-Based Recon Strategies", cat: "01-Reconnaissance", url: "../01-Reconnaissance/Recon-Target-Based-Strategies.md" , labUrl: "https://tryhackme.com/room/passiverecon" },
+      { title: "Google Dorking Safe Guide", cat: "01-Reconnaissance", url: "../01-Reconnaissance/Google-Dorking-Safe-Guide.md" , labUrl: "https://tryhackme.com/room/googledorking" },
+      { title: "GitHub Dorking Safe Guide", cat: "01-Reconnaissance", url: "../01-Reconnaissance/GitHub-Dorking-Safe-Guide.md" , labUrl: "https://tryhackme.com/room/githappens" },
+      { title: "Shodan Dorking Safe Guide", cat: "01-Reconnaissance", url: "../01-Reconnaissance/Shodan-Dorking-Safe-Guide.md" , labUrl: "https://tryhackme.com/room/shodan" },
 
       // Web Vulns
-      { title: "IDOR Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/IDOR-Security-Testing.md" },
-      { title: "Advanced IDOR & BOLA Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/IDOR-Testing-Advanced.md" },
-      { title: "Authorization Testing & IDOR", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Authorization-Testing-IDOR.md" },
-      { title: "403 Forbidden Bypass Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/403-Forbidden-Testing.md" },
-      { title: "Business Logic Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" },
-      { title: "Rate Limit Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md" },
-      { title: "XSS Testing Methods", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/XSS-Testing-Methods.md" },
-      { title: "XSS Basic & Advanced Cheat Sheet", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.md" },
-      { title: "File Upload Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/File-Upload-Security-Testing.md" },
-      { title: "Host Header Injection Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" },
-      { title: "Mass Assignment Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md" },
-      { title: "Exposed Source Code Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md" },
-      { title: "Remote Code Execution Classes", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" },
-      { title: "Command Injection Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Command-Injection-Security-Testing.md" },
-      { title: "CRLF Injection & HTTP Splitting", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md" },
-      { title: "CSRF Security Testing Guide", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md" },
-      { title: "CSRF Testing Methods", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/CSRF-Security-Testing-Methods.md" },
-      { title: "Denial of Service Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md" },
+      { title: "IDOR Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/IDOR-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter" },
+      { title: "Advanced IDOR & BOLA Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/IDOR-Testing-Advanced.md" , labUrl: "https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-unpredictable-user-ids" },
+      { title: "Authorization Testing & IDOR", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Authorization-Testing-IDOR.md" , labUrl: "https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality" },
+      { title: "403 Forbidden Bypass Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/403-Forbidden-Testing.md" , labUrl: "https://portswigger.net/web-security/access-control/lab-url-based-access-control-can-be-circumvented" },
+      { title: "Business Logic Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Business-Logic-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/logic-flaws" },
+      { title: "Rate Limit Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Rate-Limit-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic" },
+      { title: "XSS Testing Methods", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/XSS-Testing-Methods.md" , labUrl: "https://portswigger.net/web-security/cross-site-scripting" },
+      { title: "XSS Basic & Advanced Cheat Sheet", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/XSS-Cheat-Sheet-Basic-and-Advanced.md" , labUrl: "https://portswigger.net/web-security/cross-site-scripting" },
+      { title: "File Upload Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/File-Upload-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/file-upload" },
+      { title: "Host Header Injection Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Host-Header-Injection-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/host-header" },
+      { title: "Mass Assignment Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Mass-Assignment-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/api-testing/lab-bypassing-access-controls-via-mass-assignment" },
+      { title: "Exposed Source Code Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Exposed-Source-Code-Testing.md" , labUrl: "https://app.hackthebox.com/machines/Pilgrimage" },
+      { title: "Remote Code Execution Classes", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Remote-Code-Execution-Classes.md" , labUrl: "https://portswigger.net/web-security/os-command-injection" },
+      { title: "Command Injection Security Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Command-Injection-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/os-command-injection" },
+      { title: "CRLF Injection & HTTP Splitting", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/CRLF-Injection-Security-Testing.md" , labUrl: "https://pentesterlab.com/" },
+      { title: "CSRF Security Testing Guide", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/CSRF-Security-Testing-Guide.md" , labUrl: "https://portswigger.net/web-security/csrf" },
+      { title: "CSRF Testing Methods", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/CSRF-Security-Testing-Methods.md" , labUrl: "https://portswigger.net/web-security/csrf" },
+      { title: "Denial of Service Testing", cat: "02-Web-Vulnerabilities", url: "../02-Web-Vulnerabilities/Denial-of-Service-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/prototype-pollution/server-side" },
 
       // Auth & Account
-      { title: "Register Vulnerability Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md" },
-      { title: "Authentication Endpoint Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Authentication-Endpoint-Testing.md" },
-      { title: "Authentication Bypass Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md" },
-      { title: "JSON Authentication Endpoints", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" },
-      { title: "2FA Bypass Security Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md" },
-      { title: "Password Reset Checklist", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md" },
-      { title: "Account Takeover (ATO) Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" },
-      { title: "Admin Panel Security Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md" },
-      { title: "Cookie Security Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Cookie-Security-Testing.md" },
+      { title: "Register Vulnerability Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Register-Vulnerability-Testing.md" , labUrl: "https://owasp.org/www-project-juice-shop/" },
+      { title: "Authentication Endpoint Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Authentication-Endpoint-Testing.md" , labUrl: "https://portswigger.net/web-security/authentication" },
+      { title: "Authentication Bypass Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Authentication-Bypass-Security-Testing.md" , labUrl: "https://tryhackme.com/room/authenticationbypass" },
+      { title: "JSON Authentication Endpoints", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/JSON-Authentication-Endpoint-Testing.md" , labUrl: "https://portswigger.net/web-security/jwt" },
+      { title: "2FA Bypass Security Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/2FA-Bypass-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/authentication/multi-factor" },
+      { title: "Password Reset Checklist", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Password-Reset-Security-Checklist.md" , labUrl: "https://portswigger.net/web-security/host-header/lab-host-header-basic-password-reset-poisoning" },
+      { title: "Account Takeover (ATO) Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Account-Takeover-ATO-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/oauth" },
+      { title: "Admin Panel Security Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Admin-Panel-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/access-control" },
+      { title: "Cookie Security Testing", cat: "03-Authentication", url: "../03-Authentication-and-Account-Security/Cookie-Security-Testing.md" , labUrl: "https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions" },
 
       // Tech Specific
-      { title: "Django Security Review", cat: "04-Technology", url: "../04-Technology-Specific/Django-Security-Review.md" },
-      { title: "Symfony Security Review", cat: "04-Technology", url: "../04-Technology-Specific/Symfony-Security-Review.md" },
-      { title: "Jira Security Review", cat: "04-Technology", url: "../04-Technology-Specific/Jira-Security-Review.md" },
-      { title: "EXIF Metadata Privacy Testing", cat: "04-Technology", url: "../04-Technology-Specific/EXIF-Metadata-Privacy-Testing.md" },
+      { title: "Django Security Review", cat: "04-Technology", url: "../04-Technology-Specific/Django-Security-Review.md" , labUrl: "https://tryhackme.com/room/django" },
+      { title: "Symfony Security Review", cat: "04-Technology", url: "../04-Technology-Specific/Symfony-Security-Review.md" , labUrl: "https://pentesterlab.com/" },
+      { title: "Jira Security Review", cat: "04-Technology", url: "../04-Technology-Specific/Jira-Security-Review.md" , labUrl: "https://tryhackme.com/room/jira" },
+      { title: "EXIF Metadata Privacy Testing", cat: "04-Technology", url: "../04-Technology-Specific/EXIF-Metadata-Privacy-Testing.md" , labUrl: "https://tryhackme.com/room/metadataextraction" },
 
       // Research & Field
-      { title: "Target Selection Strategy Guide", cat: "05-Research", url: "../05-Research-and-Field-Notes/Target-Selection-Strategy-Guide.md" },
-      { title: "Bug Bounty Research Tips", cat: "05-Research", url: "../05-Research-and-Field-Notes/Bug-Bounty-Research-Tips.md" },
-      { title: "Bug Bounty Research Tips Part 2", cat: "05-Research", url: "../05-Research-and-Field-Notes/Bug-Bounty-Research-Tips-Part-2.md" },
-      { title: "Vulnerability Checklist Index", cat: "05-Research", url: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" },
+      { title: "Target Selection Strategy Guide", cat: "05-Research", url: "../05-Research-and-Field-Notes/Target-Selection-Strategy-Guide.md" , labUrl: "https://ctf.hacker101.com/" },
+      { title: "Bug Bounty Research Tips", cat: "05-Research", url: "../05-Research-and-Field-Notes/Bug-Bounty-Research-Tips.md" , labUrl: "https://ctf.hacker101.com/" },
+      { title: "Bug Bounty Research Tips Part 2", cat: "05-Research", url: "../05-Research-and-Field-Notes/Bug-Bounty-Research-Tips-Part-2.md" , labUrl: "https://github.com/OWASP/crAPI" },
+      { title: "Vulnerability Checklist Index", cat: "05-Research", url: "../05-Research-and-Field-Notes/Vulnerability-Checklist-Index.md" , labUrl: "https://portswigger.net/web-security" },
 
       // Learning Resources
-      { title: "Bug Bounty Hunter Learning Roadmap", cat: "06-Resources", url: "../06-Learning-Resources/Learning-Roadmap.md" },
-      { title: "Real-World Practice Labs & Motivation Guide", cat: "06-Resources", url: "../06-Learning-Resources/Real-World-Practice-Labs-Guide.md" },
-      { title: "Advance Training Checklist", cat: "06-Resources", url: "../06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.md" }
+      { title: "Bug Bounty Hunter Learning Roadmap", cat: "06-Resources", url: "../06-Learning-Resources/Learning-Roadmap.md" , labUrl: "https://portswigger.net/web-security" },
+      { title: "Real-World Practice Labs & Motivation Guide", cat: "06-Resources", url: "../06-Learning-Resources/Real-World-Practice-Labs-Guide.md" , labUrl: "https://ctf.hacker101.com/" },
+      { title: "Advance Training Checklist", cat: "06-Resources", url: "../06-Learning-Resources/Bug-Bounty-Advance-Training-Checklist.md" , labUrl: "https://portswigger.net/web-security" }
     ];
 
     const masterSearch = document.getElementById('masterSearch');
@@ -519,7 +622,10 @@
         item.innerHTML = `
           <div class="note-info">
             <span class="note-title">${guide.title}</span>
-            <span class="note-category">${guide.cat}</span>
+            <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+              <span class="note-category">${guide.cat}</span>
+              ${guide.labUrl ? `<span class="note-lab-tag" onclick="window.open('${guide.labUrl}', '_blank'); event.preventDefault(); event.stopPropagation();">🧪 Lab ↗</span>` : ''}
+            </div>
           </div>
           <span class="note-arrow">&rarr;</span>
         `;
